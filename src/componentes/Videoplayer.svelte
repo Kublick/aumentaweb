@@ -1,9 +1,19 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	let showPlayer = false;
+
 	import '@vime/core/themes/default.css';
-	import { Youtube, Player } from '@vime/svelte';
 	export let videoid: string;
+
+	onMount(async () => {
+		const { defineCustomElements } = await import('@vime/core');
+		defineCustomElements();
+		showPlayer = true;
+	});
 </script>
 
-<Player>
-	<Youtube videoId={videoid} />
-</Player>
+{#if showPlayer}
+	<vm-player controls>
+		<vm-youtube video-id={videoid} />
+	</vm-player>
+{/if}
