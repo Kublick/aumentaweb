@@ -10,7 +10,7 @@
 	<div>
 		<div class="flex flex-wrap justify-center">
 			<div class="w-full md:w-1/2 p-4">
-				<img src="/aumenta_pacientes_logo.png" alt="" />
+				<img src="/hero_aumenta.png" alt="aumenta_imagen" />
 			</div>
 			<div class="w-full md:w-1/2 p-4">
 				<img src="https://i.imgur.com/XQQXQZb.png" alt="" />
