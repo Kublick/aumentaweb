@@ -44,7 +44,7 @@
 	<div class="bg-secondary py-12">
 		<h1 class="text-white md:text-3xl text-xl text-center">Este programa es para ti si</h1>
 	</div>
-	<div class="mt-8 container mx-24">
+	<div class="mt-8 container md:mx-24 mx-auto px-4 md:px-0">
 		<div class="md:flex md:gap-24">
 			{#each beneficios as beneficio}
 				<div>

@@ -3,6 +3,7 @@
 	import Hero from '../componentes/Hero.svelte';
 	import Cta from '../componentes/Cta.svelte';
 	import Presentacion from '../componentes/Presentacion.svelte';
+	import Testimonios from '../componentes/Testimonios.svelte';
 </script>
 
 <main>
@@ -17,5 +18,8 @@
 	</section>
 	<section>
 		<Presentacion />
+	</section>
+	<section>
+		<Testimonios />
 	</section>
 </main>
