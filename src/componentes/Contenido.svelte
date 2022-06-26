@@ -1,6 +1,7 @@
 <script lang="ts">
-	import modulos from '../data/modulos.json';
-	import contenidos from '../data/moduloContenido.json';
+	import CtaButton from '../lib/CtaButton.svelte';
+
+	import { modulos, contenidos } from '../data/modulos';
 	const url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
 </script>
 
@@ -72,18 +73,7 @@
 				<img src="/hero_aumenta.png" alt="aumenta_imagen" />
 			</div>
 			<div class="w-full md:w-1/2 p-4">
-				<h1
-					class="md:text-7xl text-center font-bold mt-4 md:mt-8 text-3xl text-primary underline underline-offset-2"
-				>
-					Valor: 97 dólares
-				</h1>
-				<div class="flex justify-center my-12">
-					<button
-						class="bg-green-600 text-white px-8 py-4 rounded-full font-bold md:text-4xl hover:opacity-90"
-						on:click={() => window.open(url, '_blank')}
-						>Da click aqui para ser parte de Aumenta Pacientes</button
-					>
-				</div>
+				<CtaButton />
 			</div>
 		</div>
 	</div>
