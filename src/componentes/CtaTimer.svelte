@@ -1,17 +1,16 @@
-<script lang="ts">
-	let url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
+<script>
+	import Counter from '../lib/Counter.svelte';
 	import Icon from '@iconify/svelte';
+	let url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
 </script>
 
-<div class="md:container md:mx-12 mx-4  mt-12 ">
-	<h2 class="text-xl md:text-4xl mt-2 text-center">
-		El precio regular de este curso online es de <span class="text-primary font-bold"
-			>$197 dólares</span
-		>
-		pero al inscribirte a la primera generación de aumenta pacientes, recibes
-		<span class="text-primary font-bold"> un descuento de $100</span>
-		dólares, por lo que tu inversión seria solo de
-	</h2>
+<div class="mt-12">
+	<h1 class="text-2xl lg:text-5xl text-center">
+		El Curso Online Aumenta Pacientes Cierra Sus Puertas En
+	</h1>
+	<div class="mt-12">
+		<Counter />
+	</div>
 	<h1
 		class="md:text-7xl text-center font-bold mt-4 md:mt-8 text-3xl text-primary underline underline-offset-2"
 	>

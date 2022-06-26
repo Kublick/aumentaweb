@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"module": "Módulo #1",
+		"title": "CONTENIDO EFICAZ",
+		"text": "Aprenderás a crear contenido que atraiga a tus potenciales pacientes, sin que te tome todo el día"
+	},
+	{
+		"id": 2,
+		"module": "Módulo #2",
+		"title": "MUESTRATE ASERTIVAMENTE",
+		"text": "Conseguirás tener presencia en redes sociales de forma orgánica, sin necesidad de contratar agencias de marketing"
+	},
+	{
+		"id": 3,
+		"module": "Módulo #3",
+		"title": "CONFIANZA GENUINA",
+		"text": "Dile adiós al temor a las plataformas digitales, lograrás sentirte plenamente confiado a la hora de mostrar tus servicios de consulta"
+	},
+	{
+		"id": 4,
+		"module": "Módulo #4",
+		"title": "FACEBOOK E INSTAGRAM",
+		"text": "Automatización básica de Facebook e Instagram y creación de página"
+	}
+]
