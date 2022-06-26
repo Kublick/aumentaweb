@@ -6,6 +6,8 @@
 	import Testimonios from '../componentes/Testimonios.svelte';
 	import CtaTimer from '../componentes/CtaTimer.svelte';
 	import Contenido from '../componentes/Contenido.svelte';
+	import Faq from '../componentes/FAQ.svelte';
+	import Footer from '../componentes/Footer.svelte';
 </script>
 
 <main>
@@ -14,16 +16,13 @@
 
 	<Cta />
 
-	<section>
-		<Presentacion />
-	</section>
-	<section>
-		<Testimonios />
-	</section>
-	<section>
-		<CtaTimer />
-	</section>
-	<section>
-		<Contenido />
-	</section>
+	<Presentacion />
+
+	<Testimonios />
+
+	<CtaTimer />
+
+	<Contenido />
+	<Faq />
+	<Footer />
 </main>

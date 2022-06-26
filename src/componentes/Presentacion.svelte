@@ -3,7 +3,7 @@
 </script>
 
 <secion>
-	<div class="mt-12 bg-gradient-to-b from-secondary to-white grid md:grid-cols-3">
+	<div class="mt-12 bg-gradient-to-b from-secondary to-white grid md:grid-cols-3 items-center">
 		<div class="col-span-2 container">
 			<h1 class="text-2xl md:text-5xl text-center font-bold pt-12 md:pt-24 md:mx-2">
 				¿Pero Quién Soy Yo Para Enseñarte?
@@ -16,7 +16,9 @@
 				entrenamiento avanzado incrementa tu consulta.
 			</h2>
 		</div>
-		<div>imagen</div>
+		<div class="md:pt-24 py-2 hidden md:block">
+			<img src="/presentadora_bere.webp" alt="Berenice" />
+		</div>
 	</div>
 	<div class="mt-12 md:mt-24 py-24">
 		<div class=" py-12 bg-secondary">
