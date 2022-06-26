@@ -1,5 +1,5 @@
-<section>
-	<div class="md:container md:mx-12 mx-4 text-primary mt-12">
+<section class="md:container mx-auto">
+	<div class=" md:mx-12 text-primary mt-12 ">
 		<h1 class="text-2xl md:text-5xl text-center tracking-wide font-bold">
 			¡ADIOS AL TEMOR A LAS PLATAFORMAS DIGITALES!
 		</h1>

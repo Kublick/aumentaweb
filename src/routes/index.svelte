@@ -9,15 +9,11 @@
 </script>
 
 <main>
-	<section>
-		<Hero />
-	</section>
-	<section>
-		<Situaciones />
-	</section>
-	<section>
-		<Cta />
-	</section>
+	<Hero />
+	<Situaciones />
+
+	<Cta />
+
 	<section>
 		<Presentacion />
 	</section>
