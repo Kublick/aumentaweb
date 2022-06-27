@@ -9,7 +9,6 @@
 	import Faq from '../componentes/FAQ.svelte';
 	import SEO from '../componentes/SEO/index.svelte';
 	import website from '../componentes/SEO/website';
-
 	import { onMount } from 'svelte';
 
 	const { author, siteUrl } = website;
@@ -32,8 +31,8 @@
 	};
 
 	onMount(() => {
-		function init() {
-			const fn = function (f, b, e, v, n, t, s) {
+		if (typeof window !== 'undefined') {
+			async function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
 				if (f.fbq) return;
 				n = f.fbq = function () {
 					n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -41,23 +40,32 @@
 				if (!f._fbq) f._fbq = n;
 				n.push = n;
 				n.loaded = !0;
-				n.version = 2.0;
+				n.version = '2.0';
 				n.queue = [];
 				t = b.createElement(e);
 				t.async = !0;
 				t.src = v;
 				s = b.getElementsByTagName(e)[0];
 				s.parentNode.insertBefore(t, s);
-			};
-			fn(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-			fn('init', '227610218315785');
-			fn('track', 'PageView');
-		}
+				f.fbq('init', '227610218315785');
+				f.fbq('track', 'PageView');
+			}
 
-		init();
+			pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+			// fbq('init', '227610218315785');
+			// fbq('track', 'PageView');
+		}
 	});
 </script>
 
+<img
+	height="1"
+	width="1"
+	style="display:none"
+	src="https://www.facebook.com/tr?id=227610218315785&ev=PageView&noscript=1"
+	alt=""
+/>
 <SEO {...seoProps} />
 
 <main>
