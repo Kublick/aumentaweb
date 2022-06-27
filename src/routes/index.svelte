@@ -48,13 +48,10 @@
 				s = b.getElementsByTagName(e)[0];
 				s.parentNode.insertBefore(t, s);
 				f.fbq('init', '227610218315785');
-				f.fbq('track', 'PageView');
+				// f.fbq('track', 'PageView');
 			}
 
 			pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-			// fbq('init', '227610218315785');
-			// fbq('track', 'PageView');
 		}
 	});
 </script>
