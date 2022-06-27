@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Situaciones from '../componentes/Situaciones.svelte';
 	import Hero from '../componentes/Hero.svelte';
 	import Cta from '../componentes/Cta.svelte';
@@ -9,6 +9,8 @@
 	import Faq from '../componentes/FAQ.svelte';
 	import SEO from '../componentes/SEO/index.svelte';
 	import website from '../componentes/SEO/website';
+	import { FacebookPixel, fb } from '@beyonk/svelte-facebook-pixel';
+	import { onMount } from 'svelte';
 
 	const { author, siteUrl } = website;
 
@@ -30,7 +32,17 @@
 		lastUpdated: Date.now(),
 		metadescription
 	};
+
+	let pixelId = import.meta.env.VITE_FBOOK_PIXEL;
+
+	onMount(() => {
+		if (fb) {
+			fb.track('pageview');
+		}
+	});
 </script>
+
+<FacebookPixel id={pixelId} />
 
 <SEO {...seoProps} />
 
