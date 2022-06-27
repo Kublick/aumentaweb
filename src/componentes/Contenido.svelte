@@ -5,7 +5,7 @@
 	const url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
 </script>
 
-<div class="my-12">
+<div class="my-12 md:text-2xl">
 	<h1 class="bg-primary text-white p-8 md:text-4xl text-xl text-center ">
 		El curso online incluye
 	</h1>
@@ -24,7 +24,7 @@
 			{#each modulos as modulo}
 				<div class="flex gap-2 py-2">
 					<img src="/checkmark.svg" alt="checkmark" class="h-6 w-6" />
-					<div class="flex flex-col container mx-auto">
+					<div class="flex flex-col container mx-auto md:text-2xl">
 						<h4 class="font-bold">
 							{modulo.module}
 						</h4>
@@ -40,7 +40,7 @@
 		</div>
 		<div>
 			{#each contenidos as contenido}
-				<div class="flex gap-2 py-2">
+				<div class="flex gap-2 py-2 md:text-2xl">
 					<img src="/checkmark.svg" alt="checkmark" class="h-6 w-6" />
 					<div class="flex flex-col container mx-auto">
 						<h4 class="font-bold">
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 	<div class="mt-12 container mx-auto px-2 md:px-0">
-		<h2 class="text-center text-lg md:text-2xl">
+		<h2 class="text-center text-lg md:text-3xl">
 			Sin duda es muchísimo valor el que tendrás con el curso completo AUMENTA PACIENTES y además
 			con los bonos de regalo tienes acceso a más de <span class="text-primary font-bold"
 				>$1,200 dólares</span

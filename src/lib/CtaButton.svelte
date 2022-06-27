@@ -9,7 +9,7 @@
 </h1>
 <div class="flex justify-center my-12">
 	<button
-		class="bg-green-600 text-white px-8 py-4 rounded-full font-bold md:text-4xl md:w-[720px] hover:opacity-90"
+		class="bg-green-600 text-white px-8 py-4 rounded-full font-bold md:text-4xl md:w-[720px] hover:opacity-90 shadow-lg"
 		on:click={() => window.open(url, '_blank')}
 		>Da click aqui para ser parte de Aumenta Pacientes</button
 	>
