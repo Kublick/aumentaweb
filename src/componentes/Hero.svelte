@@ -11,7 +11,7 @@
 		<div>
 			<div class="flex flex-wrap justify-center items-center mx-4 md:mx-12">
 				<div class="w-full md:w-1/2 p-4">
-					<img src="/hero_aumenta.png" alt="aumenta_imagen" />
+					<img src="/hero_aumenta.webp" alt="aumenta_imagen" />
 				</div>
 				<div class="w-full md:w-1/2 p-4">
 					<img src="/aumenta_logo.svg" alt="aumenta logo" class="" />
