@@ -3,7 +3,7 @@
 		<h1 class="text-2xl md:text-5xl text-center tracking-wide font-bold">
 			¡ADIOS AL TEMOR A LAS PLATAFORMAS DIGITALES!
 		</h1>
-		<h2 class="text-xl md:text-4xl mt-2 text-center">
+		<h2 class="text-xl md:text-4xl mt-2 text-center mx-2">
 			Con este <span class="text-secondary">Curso Online</span>, cualquier inseguridad que puedas
 			sentir para posicionarte en el mundo digital SE IRÁ… Y a cambio, llegarán las ganancias que
 			tanto estabas esperando.
