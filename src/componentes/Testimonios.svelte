@@ -10,7 +10,13 @@
 </div>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2 ">
-	<Videoplayer videoid={'wXHrOaaJZoM'} />
-	<Videoplayer videoid={'E_Vtjlfbke4'} />
-	<Videoplayer videoid={'NmL3jxP9BB0'} />
+	<Videoplayer videoid={'vSyVhKV4n-s'} />
+	<Videoplayer videoid={'DUTbbtn9vJs'} />
+	<Videoplayer videoid={'z9CsFqeleUo'} />
+</div>
+
+<div class=" md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2 hidden md:grid">
+	<Videoplayer videoid={'4G_j_Qk7Gvc'} />
+	<Videoplayer videoid={'eGORT3A48l0'} />
+	<Videoplayer videoid={'J6PQXxhV_Ks'} />
 </div>
