@@ -1,10 +1,10 @@
 <script>
-	import differenceInSeconds from 'date-fns/differenceInSeconds';
-
 	let deadline = new Date('July 2, 2022 23:59:59');
-	let now = Date.now();
 
-	let diffInSeconds = differenceInSeconds(deadline, now);
+	let t1 = deadline.getTime();
+	let t2 = Date.now();
+	let diff = t1 - t2;
+	let diffInSeconds = Math.floor(diff / 1000);
 
 	$: d = Math.floor(diffInSeconds / 86400);
 	$: h = Math.floor((diffInSeconds - d * 86400) / 3600);
@@ -12,8 +12,10 @@
 	$: s = diffInSeconds - d * 86400 - h * 3600 - m * 60;
 
 	async function updateTimer() {
-		now = Date.now();
-		diffInSeconds = differenceInSeconds(deadline, now);
+		t1 = deadline.getTime();
+		t2 = Date.now();
+		diff = t1 - t2;
+		diffInSeconds = Math.floor(diff / 1000);
 	}
 
 	let interval = setInterval(updateTimer, 1000);
