@@ -14,6 +14,9 @@
 
 	const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
 	const url = `${siteUrl}/${slug}`;
+
+	
+
 </script>
 
 <svelte:head>
