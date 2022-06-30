@@ -53,7 +53,7 @@
 			<iframe
 				id="ytplayer"
 				type="text/html"
-				src="https://www.youtube.com/embed/A2PLm2-KIAg?t=609?autoplay=1&origin=http://example.com"
+				src="https://www.youtube.com/embed/A2PLm2-KIAg?start=609"
 				title="video"
 				frameborder="0"
 				class="ytplayer"
