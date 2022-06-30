@@ -14,7 +14,16 @@
 	</h2>
 
 	<div class="md:my-8">
-		<Videoplayer videoid={'NmL3jxP9BB0'} />
+		<div class="flex justify-center ">
+			<iframe
+				id="ytplayer"
+				type="text/html"
+				src="https://www.youtube.com/embed/A2PLm2-KIAg?t=609?autoplay=1&origin=http://example.com"
+				title="video"
+				frameborder="0"
+				class="ytplayer"
+			/>
+		</div>
 	</div>
 	<div class="flex justify-center my-12">
 		<button
@@ -24,3 +33,17 @@
 		>
 	</div>
 </main>
+
+<style>
+	.ytplayer {
+		width: 768px;
+		height: 540px;
+	}
+
+	@media screen and (max-width: 840px) {
+		.ytplayer {
+			width: 384px;
+			height: 270px;
+		}
+	}
+</style>
