@@ -1,21 +1,23 @@
 <script>
-	export let countdown = 3600 * 72 - 1;
+	import differenceInSeconds from 'date-fns/differenceInSeconds';
 
+	let deadline = new Date('July 2, 2022 23:59:59');
 	let now = Date.now();
-	let end = now + countdown * 1000;
 
-	$: count = Math.round((end - now) / 1000);
-	$: d = Math.floor(count / 60 / 60 / 24);
-	$: h = Math.floor((count / 60 / 60) % 24);
-	$: m = Math.floor((count / 60) % 60);
-	$: s = Math.floor(count % 60);
+	let diffInSeconds = differenceInSeconds(deadline, now);
 
-	function updateTimer() {
+	$: d = Math.floor(diffInSeconds / 86400);
+	$: h = Math.floor((diffInSeconds - d * 86400) / 3600);
+	$: m = Math.floor((diffInSeconds - d * 86400 - h * 3600) / 60);
+	$: s = diffInSeconds - d * 86400 - h * 3600 - m * 60;
+
+	async function updateTimer() {
 		now = Date.now();
+		diffInSeconds = differenceInSeconds(deadline, now);
 	}
 
 	let interval = setInterval(updateTimer, 1000);
-	$: if (count === 0) clearInterval(interval);
+	$: if (diffInSeconds === 0) clearInterval(interval);
 </script>
 
 <section>

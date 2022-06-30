@@ -37,6 +37,7 @@
 	"type": "module",
 	"dependencies": {
 		"@vime/core": "^5.3.1",
-		"@vime/svelte": "^5.3.1"
+		"@vime/svelte": "^5.3.1",
+		"date-fns": "^2.28.0"
 	}
 }
