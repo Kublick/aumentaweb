@@ -6,6 +6,7 @@
 	const url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
 
 	onMount(() => {
+		goto('https://www.incrementatuconsulta.com');
 		if (typeof window !== 'undefined') {
 			function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
 				if (f.fbq) return;

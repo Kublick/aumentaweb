@@ -10,6 +10,7 @@
 	import SEO from '../componentes/SEO/index.svelte';
 	import website from '../componentes/SEO/website';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	const { author, siteUrl } = website;
 
@@ -31,6 +32,7 @@
 	};
 
 	onMount(() => {
+		goto('https://www.incrementatuconsulta.com');
 		if (typeof window !== 'undefined') {
 			function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
 				if (f.fbq) return;
