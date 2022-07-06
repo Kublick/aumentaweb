@@ -14,6 +14,7 @@
 			<span class="text-primary font-bold"> un descuento de $100</span>
 			dólares, por lo que tu inversión seria solo de
 		</h2>
+
 		<CtaButton />
 		<div class="flex gap-8 justify-center items-center flex-wrap">
 			<Icon icon="dashicons:lock" width="64" height="64" class="text-gray-600" />

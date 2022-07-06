@@ -13,7 +13,8 @@ const website = {
 	facebookAuthorPage: `https://www.facebook.com/${facebookAuthorPageName}`,
 	facebookAuthorPageName,
 	facebookPage: `https://www.facebook.com/${facebookPageName}`,
-	facebookPageName
+	facebookPageName,
+	awsUrl: import.meta.env.VITE_AWS_URL
 };
 
 export { website as default };
