@@ -16,13 +16,13 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: false
+			precompress: false,
+			trailingSlash: true
 		}),
 		prerender: {
 			default: true
 		}
-	},
-	trailingSlash: 'always'
+	}
 };
 
 export default config;
