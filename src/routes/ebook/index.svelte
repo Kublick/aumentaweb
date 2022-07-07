@@ -1,6 +1,6 @@
 <script>
-	import FormularioWebinar from '../../componentes/FormularioWebinar.svelte';
 	import FooterPink from '../../componentes/FooterPink.svelte';
+	import FormularioEbook from '../../componentes/FormularioEbook.svelte';
 
 	const goTop = () => {
 		document.body.scrollIntoView();
@@ -21,7 +21,7 @@
 			<h2 class="text-2xl text-black md:text-5xl md:py-4 text-center">
 				Los 3 Secretos Para Vender Tu Consulta Con Éxito En Internet
 			</h2>
-			<FormularioWebinar />
+			<FormularioEbook />
 			<p class="text-xs">Da click en el botón para registrarte</p>
 		</div>
 	</section>
