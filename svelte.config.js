@@ -21,7 +21,8 @@ const config = {
 		prerender: {
 			default: true
 		}
-	}
+	},
+	trailingSlash: 'always'
 };
 
 export default config;
