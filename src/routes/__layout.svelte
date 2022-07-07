@@ -21,6 +21,7 @@
 			s = b.getElementsByTagName(e)[0];
 			s.parentNode.insertBefore(t, s);
 			f.fbq('init', fbPixel);
+			f.fbq('track', 'PageView');
 		}
 		pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 	}

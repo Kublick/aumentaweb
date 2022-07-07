@@ -26,10 +26,7 @@
 			.then((response) => {
 				if (response.status === 200) {
 					if (typeof window !== 'undefined') {
-						if (window.fbq != null) {
-							window.fbq('track', 'CompleteRegistration');
-							console.log('track registration');
-						}
+						window.fbq('track', 'CompleteRegistration');
 					}
 				}
 				setTimeout(() => {
