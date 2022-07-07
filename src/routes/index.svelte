@@ -9,6 +9,7 @@
 	import Faq from '../componentes/FAQ.svelte';
 	import SEO from '../componentes/SEO/index.svelte';
 	import website from '../componentes/SEO/website';
+	import Footer from '../componentes/Footer.svelte';
 
 	const { author, siteUrl } = website;
 
@@ -40,4 +41,5 @@
 	<CtaTimer />
 	<Contenido />
 	<Faq />
+	<Footer />
 </main>

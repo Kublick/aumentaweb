@@ -9,7 +9,8 @@ const config = {
 				secondarylight: '#fbc527',
 				whatsapp: '#35B624',
 				lightgray: '#383838',
-				facebook: '#1877f2'
+				facebook: '#1877f2',
+				webinar: 'rgb(231, 64, 123)'
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif']

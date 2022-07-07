@@ -77,8 +77,7 @@
 	{/if}
 
 	<button
-		id="modal-trigger2"
-		class="bg-primary py-4 px-8 text-white sm:text-lg rounded-full m-4 wiggle hover:animate-none disabled:opacity-50 disabled:cursor-not-allowed "
+		class="bg-webinar py-4 px-8 text-white sm:text-lg rounded-full m-4 wiggle hover:animate-none disabled:opacity-50 disabled:cursor-not-allowed "
 		disabled={hasError}>RESERVAR MI LUGAR AHORA</button
 	>
 </form>

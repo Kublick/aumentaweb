@@ -1,45 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	import { onMount } from 'svelte';
-
 	const url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
-
-	onMount(() => {
-		goto('https://www.incrementatuconsulta.com');
-		if (typeof window !== 'undefined') {
-			function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
-				if (f.fbq) return;
-				n = f.fbq = function () {
-					n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-				};
-				if (!f._fbq) f._fbq = n;
-				n.push = n;
-				n.loaded = !0;
-				n.version = '2.0';
-				n.queue = [];
-				t = b.createElement(e);
-				t.async = !0;
-				t.src = v;
-				s = b.getElementsByTagName(e)[0];
-				s.parentNode.insertBefore(t, s);
-				f.fbq('init', '227610218315785');
-				// f.fbq('track', 'PageView');
-				f.fbq('track', 'ViewContent');
-			}
-
-			pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-		}
-	});
 </script>
-
-<img
-	height="1"
-	width="1"
-	style="display:none"
-	src="https://www.facebook.com/tr?id=227610218315785&ev=PageView&noscript=1"
-	alt=""
-/>
 
 <main class="container mx-auto mt-12 md:mt-24 px-2">
 	<h1 class="text-xl md:text-4xl text-secondary text-center ">

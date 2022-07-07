@@ -1,6 +1,4 @@
 <script lang="ts" context="module">
-	import Footer from '../componentes/Footer.svelte';
-
 	import '../app.css';
 
 	if (typeof window !== 'undefined') {
@@ -34,4 +32,3 @@
 />
 
 <slot />
-<Footer />
