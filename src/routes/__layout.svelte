@@ -1,5 +1,10 @@
 <script lang="ts" context="module">
 	import '../app.css';
+	import website from '../componentes/SEO/website';
+
+	const { fbPixel } = website;
+
+	console.log(fbPixel);
 
 	if (typeof window !== 'undefined') {
 		function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
@@ -17,7 +22,7 @@
 			t.src = v;
 			s = b.getElementsByTagName(e)[0];
 			s.parentNode.insertBefore(t, s);
-			f.fbq('init', '227610218315785');
+			f.fbq('init', fbPixel);
 		}
 		pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 	}
