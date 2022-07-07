@@ -4,8 +4,6 @@
 
 	const { fbPixel } = website;
 
-	console.log(fbPixel);
-
 	if (typeof window !== 'undefined') {
 		function pixel(f?: any, b?: any, e?: any, v?: any, n?: any, t?: any, s?: any) {
 			if (f.fbq) return;
