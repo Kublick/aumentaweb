@@ -16,9 +16,9 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: false,
-			trailingSlash: true
+			precompress: false
 		}),
+		trailingSlash: 'always',
 		prerender: {
 			default: true
 		}
