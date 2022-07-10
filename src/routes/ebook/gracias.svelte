@@ -21,6 +21,11 @@
 			console.log(error);
 		}
 	});
+
+	if (typeof window !== 'undefined') {
+		console.log('done');
+		window.fbq('track', 'CompleteRegistration');
+	}
 </script>
 
 <div class="flex flex-col h-screen justify-center align-middle bg-transparent">

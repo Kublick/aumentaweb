@@ -25,13 +25,10 @@
 		})
 			.then((response) => {
 				if (response.status === 200) {
-					if (typeof window !== 'undefined') {
-						window.fbq('track', 'CompleteRegistration');
-					}
+					setTimeout(() => {
+						goto('/webinar/gracias');
+					}, 2000);
 				}
-				setTimeout(() => {
-					goto('/webinar/gracias');
-				}, 2000);
 			})
 			.catch((error) => {
 				console.log(error);

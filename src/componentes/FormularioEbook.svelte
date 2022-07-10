@@ -25,9 +25,7 @@
 		})
 			.then((response) => {
 				if (response.status === 200) {
-					if (typeof window !== 'undefined') {
-						window.fbq('track', 'CompleteRegistration');
-					}
+					
 				}
 				setTimeout(() => {
 					goto('/ebook/gracias');
