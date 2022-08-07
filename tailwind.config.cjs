@@ -5,7 +5,7 @@ const config = {
 		extend: {
 			colors: {
 				primary: '#2B4570',
-				secondary: '#fbbf0f',
+				secondary: '#fbb923',
 				secondarylight: '#fbc527',
 				whatsapp: '#35B624',
 				lightgray: '#383838',
