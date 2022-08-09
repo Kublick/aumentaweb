@@ -63,7 +63,7 @@
 				Da click en el botón para registrarte a este webinar:
 			</p>
 			<button
-				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600"
+				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
 				on:click={() => toggleModal(FormularioClase)}
 			>
 				Registrate Gratis
@@ -177,43 +177,49 @@
 	</section>
 
 	<section>
-		<h1 class="text-center text-2xl md:text-4xl font-bold mb-16">Esto Es Para Ti Sí:</h1>
-		<div class="grid md:grid-cols-2 mx-auto container">
-			<div>
-				<h1>Imagenes</h1>
+		<h1 class="text-center text-2xl md:text-6xl font-bold mb-8 md:mb-16">Esto Es Para Ti Sí:</h1>
+		<div class="grid md:grid-cols-2 md:gap-8">
+			<div class="flex flex-col ">
+				<img
+					src="/parati1.webp"
+					alt="imagen parati"
+					class="md:self-start md:ml-12 md:block hidden"
+				/>
+				<img src="/parati2.webp" alt="imagen parati2" class="md:self-end md:mr-6 hidden md:block" />
+				<img
+					src="/parati3.webp"
+					alt="imagen parati3"
+					class="md:self-start md:ml-12 hidden md:block"
+				/>
 			</div>
-			<div>
-				<ul>
-					{#each textsParaTi as content}
-						<li class="">
-							<div class="flex gap-4 items-center">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-12 w-12 flex-shrink-0"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-								</svg>
-								<p class="text-lg md:text-4xl">
-									{content.text}
-								</p>
-							</div>
-						</li>
-					{/each}
-				</ul>
+			<div class="flex flex-col justify-between">
+				{#each textsParaTi as content}
+					<div class="flex gap-4 items-center ">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-12 w-12 flex-shrink-0"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+						</svg>
+						<p class="text-lg md:text-3xl md:mx-8 mx-4 md:mt-0">
+							{content.text}
+						</p>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
 
-	<section class=" my-4 mx-auto">
+	<section class="my-16 mx-auto">
 		<div class="text-center bg-secondary py-6">
 			<h1 class="text-xl md:text-4xl font-bold">Conoce Más De Berenice</h1>
 		</div>
-		<div class="flex container items-center gap-8 mx-auto">
-			<div>
+		<div class="md:flex md:items-center md:gap-8 md:w-3/4 container mt-8 mx-auto">
+			<div class="flex flex-col gap-4 mx-6 md:0 md:text-xl text-lg">
 				<p>
 					Berenice Bastidas creadora de programas internacionales como: Incrementa Tu Consulta y
 					Aumenta Pacientes, con los cuales ya estoy ayudando a profesionales de más de14 países
@@ -225,11 +231,11 @@
 					con estrategia a través de internet incluso empezando desde cero.
 				</p>
 			</div>
-			<img src="/berenice_portrait.webp" alt="Berenice Bastidas" class="" />
+			<img src="/berenice_portrait.webp" alt="Berenice Bastidas" class="mx-auto mt-4" />
 		</div>
 	</section>
 
-	<section class="container mx-auto my-16">
+	<section class="mx-4 my-16">
 		<h1 class="text-xl md:text-4xl text-center">
 			Regístrate <span class="font-semibold text-secondary text-center"
 				>Gratis Al Taller En Línea</span
@@ -240,14 +246,26 @@
 				Da click en el botón para registrarte a este webinar:
 			</p>
 			<button
-				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600"
-				on:click={() => toggleModal(FormularioClase)}
+				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
+				on:click={() => {
+					goTop();
+					toggleModal(FormularioClase);
+				}}
 			>
 				Registrate Gratis
 			</button>
 		</div>
 	</section>
 </main>
-<foooter class="container mx-auto">
-	<h1 class="py-8 bg-secondary text-white text-center">Politicas de Privacidad</h1>
+<foooter class="">
+	<div class="bg-secondary py-8 text-center md:text-xl text-sm px-4">
+		<p class="text-white  ">
+			Legal Terms - Acerca de las politicas de privacidad y uso de cookies Incrementa tu consulta
+			Derechos reservados 2021
+		</p>
+		<p class="text-white ">
+			<a href="https://incrementatuconsulta.com">https://incrementatuconsulta.com</a> Psicologa Berenice
+			Bastidas Mexicali Baja California, México Whatsapp: +52 (686) 234-9366
+		</p>
+	</div>
 </foooter>
