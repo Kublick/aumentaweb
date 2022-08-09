@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { Confetti } from 'svelte-confetti';
+	import ToggleConffeti from './ToggleConffeti.svelte';
 
 	let hasError = false;
+	let confetti = false;
 
 	let email = '';
 	let fullname = '';
@@ -9,6 +12,7 @@
 	function onSubmit(e: any) {
 		if (email.length === 0 || fullname.length === 0) {
 			hasError = true;
+
 			setTimeout(() => {
 				hasError = false;
 			}, 3000);
@@ -16,7 +20,7 @@
 		}
 
 		const formData = new FormData(e.target);
-
+		confetti = true;
 		const url = 'https://psicologaberenicebastidas.activehosted.com/proc.php';
 		fetch(url, {
 			method: 'POST',
@@ -33,6 +37,10 @@
 			.catch((error) => {
 				console.log(error);
 			});
+
+		setTimeout(() => {
+			goto('/clase/gracias');
+		}, 2000);
 	}
 </script>
 
@@ -68,6 +76,12 @@
 
 	{#if hasError == true}
 		<p class="text-red-500 text-sm">* Todos los campos son requeridos</p>
+	{/if}
+
+	{#if confetti == true}
+		<div class="flex justify-center">
+			<Confetti />
+		</div>
 	{/if}
 
 	<button

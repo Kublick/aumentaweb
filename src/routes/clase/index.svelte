@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Modal from '$lib/Modal.svelte';
 	import FormularioClase from '../../componentes/FormularioClase.svelte';
+
+	import Modal from 'svelte-simple-modal';
+	import Content from '../../componentes/Content.svelte';
 
 	const goTop = () => {
 		document.body.scrollIntoView();
@@ -56,19 +58,23 @@
 				</span> Facturando $5,000 Dólares O Más
 			</h2>
 
-			{#if showModal}
+			<!-- {#if showModal}
 				<Modal on:click={toggleModal} {modalContent} />
-			{/if}
+			{/if} -->
 
 			<p class="text-sm my-4 tracking-wide">
 				Da click en el botón para registrarte a este webinar:
 			</p>
-			<button
+			<!-- <button
 				class="bg-greenbutton py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
 				on:click={() => toggleModal(FormularioClase)}
 			>
 				Registrate Gratis
-			</button>
+			</button> -->
+
+			<Modal>
+				<Content />
+			</Modal>
 		</div>
 	</section>
 	<div class="bg-secondary py-2 mt-16" />
@@ -250,7 +256,7 @@
 			<p class="text-sm my-4 tracking-wide">
 				Da click en el botón para registrarte a este webinar:
 			</p>
-			<button
+			<!-- <button
 				class="bg-greenbutton py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
 				on:click={() => {
 					goTop();
@@ -258,7 +264,11 @@
 				}}
 			>
 				Registrate Gratis
-			</button>
+			</button> -->
+
+			<Modal>
+				<Content />
+			</Modal>
 		</div>
 	</section>
 </main>
