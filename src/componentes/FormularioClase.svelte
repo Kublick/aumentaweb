@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { Confetti } from 'svelte-confetti';
-	import ToggleConffeti from './ToggleConffeti.svelte';
 
 	let hasError = false;
 	let confetti = false;
