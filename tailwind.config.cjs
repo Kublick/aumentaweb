@@ -10,7 +10,8 @@ const config = {
 				whatsapp: '#35B624',
 				lightgray: '#383838',
 				facebook: '#1877f2',
-				webinar: 'rgb(231, 64, 123)'
+				webinar: 'rgb(231, 64, 123)',
+				greenbutton: 'rgb(131, 201, 45)'
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif']

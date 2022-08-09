@@ -2,8 +2,6 @@
 	import Modal from '$lib/Modal.svelte';
 	import FormularioClase from '../../componentes/FormularioClase.svelte';
 
-	import FooterPink from '../../componentes/FooterPink.svelte';
-
 	const goTop = () => {
 		document.body.scrollIntoView();
 	};
@@ -36,34 +34,37 @@
 	<section class="mx-auto">
 		<div class="bg-secondary text-white py-4">
 			<h1 class="md:text-2xl text-center uppercase">
-				CLASE GRATUITA: ¿COMO GENERAR PROSPECTOS A PACIENTES TODOS LOS DIAS
+				<span class="font-bold">CLASE GRATUITA:</span> ¿COMO GENERAR PROSPECTOS A PACIENTES TODOS LOS
+				DIAS?
 			</h1>
 		</div>
 		<div class="flex justify-center flex-col items-center gap-4 mt-16">
-			<h2 class="text-2xl md:text-4xl md:w-1/2 text-center mx-4 md:mx-0 ">
+			<h2 class="text-2xl md:text-4xl md:w-3/4 text-center mx-4 md:mx-0 ">
 				<span class="text-secondary font-semibold">¡Atención!</span> Nutriologos, Coaches, Psicólogos
 				Y Profesionales de la Salud:
 			</h2>
-			<h2 class="text-2xl md:text-4xl md:w-1/2 text-center mx-4 md:mx-0">
+			<h2 class="text-2xl md:text-4xl md:w-3/4 text-center mx-4 md:mx-0">
 				Reserva Tu Lugar Gratis A Mi Clase Gratuita:
 			</h2>
 		</div>
 		<div class="flex flex-col items-center m-4">
 			<h2
-				class="text-2xl text-black md:text-5xl md:py-4 text-center font-bold md:w-1/2 mx-4 md:mx-0"
+				class="text-2xl text-black md:text-5xl md:py-4 text-center font-bold md:w-3/4 mx-4 md:mx-0"
 			>
-				Los 3 Secretos Para Ofrecer y/o Vender Tu Consulta, Facturando $5,000 Dólares O Más
+				Los 3 Secretos Para <span class="font-bold text-secondary"
+					>Ofrecer y/o Vender Tu Consulta,
+				</span> Facturando $5,000 Dólares O Más
 			</h2>
 
 			{#if showModal}
 				<Modal on:click={toggleModal} {modalContent} />
 			{/if}
 
-			<p class="text-xs my-4 tracking-wide">
+			<p class="text-sm my-4 tracking-wide">
 				Da click en el botón para registrarte a este webinar:
 			</p>
 			<button
-				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
+				class="bg-greenbutton py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
 				on:click={() => toggleModal(FormularioClase)}
 			>
 				Registrate Gratis
@@ -177,7 +178,10 @@
 	</section>
 
 	<section>
-		<h1 class="text-center text-2xl md:text-6xl font-bold mb-8 md:mb-16">Esto Es Para Ti Sí:</h1>
+		<h1 class="text-center text-2xl md:text-4xl font-bold ">Esto Es Para Ti Sí:</h1>
+		<div class="flex justify-center mb-8 md:mb-16 mt-4">
+			<div class="bg-secondary h-1 w-1/2 text-center" />
+		</div>
 		<div class="grid md:grid-cols-2 md:gap-8">
 			<div class="flex flex-col ">
 				<img
@@ -197,15 +201,15 @@
 					<div class="flex gap-4 items-center ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-12 w-12 flex-shrink-0"
+							class="h-12 w-12 flex-shrink-0 text-secondary "
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
-							stroke-width="2"
+							stroke-width="3"
 						>
 							<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
 						</svg>
-						<p class="text-lg md:text-3xl md:mx-8 mx-4 md:mt-0">
+						<p class="text-lg md:text-2xl md:mx-8 mx-4 md:mt-0">
 							{content.text}
 						</p>
 					</div>
@@ -233,20 +237,21 @@
 			</div>
 			<img src="/berenice_portrait.webp" alt="Berenice Bastidas" class="mx-auto mt-4" />
 		</div>
+		<div class="bg-secondary h-1" />
 	</section>
 
 	<section class="mx-4 my-16">
-		<h1 class="text-xl md:text-4xl text-center">
+		<h1 class="text-xl md:text-2xl text-center">
 			Regístrate <span class="font-semibold text-secondary text-center"
 				>Gratis Al Taller En Línea</span
 			> Dando Click En El Botón Para Asegurar Tu Lugar
 		</h1>
 		<div class="flex flex-col items-center">
-			<p class="text-xs my-4 tracking-wide">
+			<p class="text-sm my-4 tracking-wide">
 				Da click en el botón para registrarte a este webinar:
 			</p>
 			<button
-				class="bg-lime-400 py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
+				class="bg-greenbutton py-4 px-12 text-white font-semibold shadow-lg tracking-wide text-2xl hover:bg-lime-600 cursor-pointer"
 				on:click={() => {
 					goTop();
 					toggleModal(FormularioClase);
