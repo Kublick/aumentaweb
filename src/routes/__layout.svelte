@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Analytics from '$lib/Analytics.svelte';
+
 	import '../app.css';
 	import website from '../componentes/SEO/website';
 
@@ -26,6 +28,8 @@
 		pixel(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 	}
 </script>
+
+<Analytics />
 
 <!-- <img
 	height="1"
