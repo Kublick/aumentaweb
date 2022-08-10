@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts">
 	import '../app.css';
 	import website from '../componentes/SEO/website';
 
@@ -27,12 +27,12 @@
 	}
 </script>
 
-<img
+<!-- <img
 	height="1"
 	width="1"
 	style="display:none"
 	src="https://www.facebook.com/tr?id=227610218315785&ev=PageView&noscript=1"
 	alt=""
-/>
+/> -->
 
 <slot />
