@@ -23,6 +23,7 @@
 	});
 
 	if (typeof window !== 'undefined') {
+		console.log('entro');
 		window.fbq('track', 'CompleteRegistration');
 	}
 </script>
@@ -50,7 +51,8 @@
 					1. Unirte al <span class="font-semibold">GRUPO PRIVADO</span>{' '}
 					de
 					<span class="font-semibold"> Whastapp</span> para recibir todas las
-					<span>NOTIFICACIONES </span>del evento y que no te pierdas de nada.
+					<span>NOTIFICACIONES </span>del evento y en este grupo recibiras el enlace para el
+					<span class="font-bold">acceso a la sala de Zoom</span>.
 				</p>
 
 				<div class="flex justify-center gap-4 align-middle items-center ">
@@ -107,7 +109,7 @@
 										/>
 									</svg>
 								</span>
-								Da click en el botón y ve al grupo
+								Da click en el botón y entra al grupo
 							</button>
 						{/if}
 					</div>
@@ -119,9 +121,8 @@
 					<span>WEBINAR </span>y busca el
 					<span class="font-semibold"> CORREO</span> con el
 					<span class="font-semibold"> TÍTULO</span>:{' '}
-					<span class="font-semibold ">
-						[IMPORTANTE] tu cupo esta confirmado{' '}
-					</span>
+					<span class="font-semibold "> [IMPORTANTE] tu cupo esta confirmado </span> recibiras un correo
+					electronico con los horarios del evento segun tu país
 				</p>
 			</div>
 		</div>
