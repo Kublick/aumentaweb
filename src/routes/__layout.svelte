@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Analytics from '$lib/Analytics.svelte';
-
 	import '../app.css';
 	import website from '../componentes/SEO/website';
 

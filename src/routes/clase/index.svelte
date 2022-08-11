@@ -1,6 +1,5 @@
 <script lang="ts">
-	import FormularioClase from '../../componentes/FormularioClase.svelte';
-
+	import SEO from '../../componentes/SEO/index.svelte';
 	import Modal from 'svelte-simple-modal';
 	import Content from '../../componentes/Content.svelte';
 
@@ -30,9 +29,15 @@
 			text: 'La razón por la que no has empezado a ofrecer y/o vender tu consulta es porque no sabes los pasos a seguir.'
 		}
 	];
+
+	const seoProps = {
+		title: 'Bienvenido a la Clase',
+		slug: '',
+		metadescription: 'Incrementa tu consulta clase'
+	};
 </script>
 
-<main>
+<SEO {...seoProps}>
 	<section class="mx-auto">
 		<div class="bg-secondary text-white py-4">
 			<h1 class="md:text-2xl text-center uppercase">
@@ -271,7 +276,7 @@
 			</Modal>
 		</div>
 	</section>
-</main>
+</SEO>
 <foooter class="">
 	<div class="bg-secondary py-8 text-center md:text-xl text-sm px-4">
 		<p class="text-white  ">

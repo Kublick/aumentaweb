@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import website from '../../componentes/SEO/website';
+	import SEO from '../../componentes/SEO/index.svelte';
+
 	const { awsUrl } = website;
 	let disabled = true;
 	let whatsappUrl = '';
@@ -23,11 +25,17 @@
 	});
 
 	if (typeof window !== 'undefined') {
-		console.log('entro');
 		window.fbq('track', 'CompleteRegistration');
 	}
+
+	const seoProps = {
+		title: 'Gracias por registrarte',
+		slug: '',
+		metadescription: 'Registro completado'
+	};
 </script>
 
+<SEO {...seoProps} />
 <div class="flex flex-col h-screen justify-center align-middle bg-transparent">
 	<div class="grid lg:grid-cols-4 bg-transparent min-h-[720px] items-center">
 		<div class="hidden py-24 md:bg-gradient-to-r from-secondary  to-white lg:grid container ">
