@@ -14,7 +14,7 @@
 <svelte:head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NB8XTTR">
 	</script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EG7FM0BJFH"></script>
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -24,6 +24,5 @@
 
 		gtag('js', new Date());
 		gtag('config', 'GTM-NB8XTTR');
-		gtag('config', 'G-EG7FM0BJFH');
 	</script>
 </svelte:head>
