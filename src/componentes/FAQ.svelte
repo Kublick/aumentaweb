@@ -24,7 +24,7 @@
 		El precio regular de este curso online es de <span class="text-primary font-bold"
 			>$197 dólares</span
 		>
-		pero al inscribirte a la primera generación de aumenta pacientes, recibes
+		pero al inscribirte hoy, recibes
 		<span class="text-primary font-bold"> un descuento de $100</span>
 		dólares, por lo que tu inversión seria solo de
 	</h1>
