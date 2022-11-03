@@ -1,5 +1,5 @@
 <script>
-	let deadline = new Date('August 20, 2022 23:59:59');
+	let deadline = new Date('November 5, 2022 20:00:00');
 
 	let t1 = deadline.getTime();
 	let t2 = Date.now();

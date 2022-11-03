@@ -8,7 +8,7 @@
 			<h1 class="text-2xl md:text-5xl text-center font-bold pt-12 md:pt-24 md:mx-2">
 				¿Pero Quién Soy Yo Para Enseñarte?
 			</h1>
-			<h2 class="text-lg md:text-2xl mt-8 text-center mx-4 leading-0 md:mx-32">
+			<h2 class="text-lg md:text-2xl mt-8 text-justify mx-4 leading-0 md:mx-32">
 				Psicóloga de profesión desde hace 15 años y en los últimos años me he dedicado ayudar a
 				Psicólogos, Nutriólogos, Terapeutas, Odontólogos y Profesionales de la Salud a incrementar
 				su número de pacientes, con estrategia a través de internet incluso empezando desde cero,

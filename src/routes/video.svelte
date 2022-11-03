@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	const url = 'https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10';
+	const url = 'https://www.aumentapacientes.com';
 </script>
 
 <main class="container mx-auto mt-12 md:mt-24 px-2">
@@ -19,7 +19,7 @@
 			<iframe
 				id="ytplayer"
 				type="text/html"
-				src="https://www.youtube.com/embed/fM6KzsBeq6M"
+				src="https://www.youtube.com/embed/4Bg-nUZMLio"
 				title="video"
 				frameborder="0"
 				class="ytplayer"
@@ -29,7 +29,7 @@
 	<div class="flex justify-center my-12">
 		<button
 			class="bg-green-600 text-white px-8 py-4 rounded-full font-bold md:text-4xl md:w-[720px] hover:opacity-90 shadow-lg"
-			on:click={() => goto(url)}>Da click aqui para ser parte de Aumenta Pacientes</button
+			on:click={() => goto(url)}>Da click aquí para ser parte de Aumenta Pacientes</button
 		>
 	</div>
 </main>
