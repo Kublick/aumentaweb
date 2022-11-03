@@ -11,8 +11,8 @@
 				>$197 dólares</span
 			>
 			pero al inscribirte hoy, recibes
-			<span class="text-primary font-bold"> un descuento de $100</span>
-			dólares, por lo que tu inversión seria solo de
+			<span class="text-primary font-bold"> un descuento de 50%</span>, por lo que tu inversión
+			seria solo de
 		</h2>
 
 		<CtaButton />
