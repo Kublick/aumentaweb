@@ -20,6 +20,7 @@
 				id="ytplayer"
 				type="text/html"
 				src="https://www.youtube.com/embed/4Bg-nUZMLio"
+				start="1948"
 				title="video"
 				frameborder="0"
 				class="ytplayer"
