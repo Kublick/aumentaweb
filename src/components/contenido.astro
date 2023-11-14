@@ -1,0 +1,79 @@
+---
+import { modulos, contenidos } from "../data/modulos";
+import Ctatimer from "./ctatimer.astro";
+import CtaButton from "./elements/ctabutton.astro";
+---
+
+<div class="my-12 md:text-2xl">
+  <h1 class="bg-primary text-white p-8 md:text-4xl text-xl text-center">
+    El curso online incluye
+  </h1>
+
+  <div
+    class="grid md:grid-cols-2 gap-4 container mx-auto mt-12 text-primary px-2 md:px-0"
+  >
+    <div>
+      <div class="flex gap-2">
+        <img src="/checkmark.svg" alt="checkmark" class="h-6 w-6" />
+
+        <div>
+          <h4 class="font-bold">
+            Sistema Aumenta Pacientes Valorado en $900 dólares
+          </h4>
+          <h4>
+            Programa intensivo de 4 semanas con mentorías grupales en vivo.
+            Además de que con este programa aprenderás la estrategia y el método
+            completa para atraer pacientes a tu consultorio todos los días,
+            mejorando tu número de consultas semanales, multiplicando con esto
+            tus ingresos y cada semana nos reuniremos en vivo vía Zoom, para
+            hacer seguimiento de tus avances e ir respondiendo cada una de tus
+            inquietudes
+          </h4>
+        </div>
+      </div>
+
+      {
+        modulos.map((modulo) => (
+          <div class="flex gap-2 py-2">
+            <img src="/checkmark.svg" alt="checkmark" class="h-6 w-6" />
+            <div class="flex flex-col container mx-auto md:text-2xl">
+              <h4 class="font-bold">{modulo.module}</h4>
+              <h4 class="font-bold uppercase">{modulo.title}</h4>
+              <p>{modulo.text}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div>
+      {
+        contenidos.map((contenido) => (
+          <div class="flex gap-2 py-2 md:text-2xl">
+            <img src="/checkmark.svg" alt="checkmark" class="h-6 w-6" />
+            <div class="flex flex-col container mx-auto">
+              <h4 class="font-bold">{contenido.title}</h4>
+              <p>{contenido.text}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="mt-12 container mx-auto px-2 md:px-0">
+    <h2 class="text-center text-lg md:text-3xl">
+      Es Momento De Tomar Desiciones El tiempo para acceder a AUMENTA PACIENTES
+      a este precio es LIMITADO. Esta promoción UNICA solo para los que se
+      inscriben esta semana, Nunca volverás a ver el programa a este precio.
+    </h2>
+  </div>
+  <div>
+    <div class="mx-4 md:mx-12">
+      <div class="w-full md:w-1/2 p-4 mx-auto">
+        <img src="/hero_aumenta.webp" alt="aumenta_imagen" />
+      </div>
+      <div class="w-full p-4">
+        <Ctatimer />
+      </div>
+    </div>
+  </div>
+</div>

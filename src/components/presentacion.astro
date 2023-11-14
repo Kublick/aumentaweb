@@ -1,0 +1,68 @@
+---
+import { beneficios } from "../data/beneficios";
+---
+
+<style>
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+</style>
+
+<secion>
+  <div class="mt-12 md:mt-24 py-24">
+    <div class="py-12 bg-secondary">
+      <h1 class="text-white md:text-3xl text-xl text-center">
+        Este programa es para ti si
+      </h1>
+    </div>
+    <div class="container mx-auto">
+      <div class="mt-8 md:mx-24 px-4 md:px-0">
+        <div class="md:flex md:gap-16">
+          {
+            beneficios.map((beneficio) => (
+              <div>
+                <h4 class="text-2xl font-bold py-4">{beneficio.title}</h4>
+                <div class="bg-gradient-to-r from-secondary to-white h-4" />
+                <p class="text-lg py-4">{beneficio.text}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto">
+    <h1 class="text-lg md:text-2xl mt-2 md:mt-8 text-primary font-bold">
+      Entiendo que quizás nunca hayas oído hablar de prospectar pacientes a
+      través de las redes sociales, como herramienta para hacer crecer tu
+      negocio de consulta, y que en estos momentos te asaltan mil dudas,
+      seguramente estes pensando:
+    </h1>
+    <ul class="mt-4 md:text-xl">
+      <li>
+        No tengo tiempo de estudiar un curso y más sin estar seguro de que me
+        traerá resultados
+      </li>
+      <li>
+        No me gusta estudiar en linea, tengo miedo de no entender esta
+        información nueva
+      </li>
+      <li>No tengo dinero para invertir en publicidad</li>
+      <li>Nunca he usado las redes sociales y me resulta complicado hacerlo</li>
+    </ul>
+
+    <h1 class="text-lg md:text-2xl mt-2 md:mt-8 text-primary font-bold">
+      Y puede que hasta hayas escuchado muchas veces que para tener un negocio
+      sostenible de consulta y rentable tienes que invertir miles de dólares en
+      publicidad (!miles de dólares que ni siquiera has tenido nunca en tu
+      cuenta bancaria...!)
+    </h1>
+    <h1 class="text-lg md:text-2xl mt-2 md:mt-8 text-primary font-light">
+      ¡No pasa nada!, es normal que tengas estas dudas por que yo al igual que
+      tú cuando empece también las tuve. Por eso estoy convencida de que lo que
+      te voy a revelar cambiará tu consulta y tu vida como lo ha hecho clos
+      alumnos del programa y con mi propia consulta privada.
+    </h1>
+  </div>
+</secion>

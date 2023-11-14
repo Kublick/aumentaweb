@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon";
+import Ctabutton from "./elements/ctabutton.astro";
+import Carrouseltestimonios from "./elements/carrouseltestimonios.astro";
+---
+
+<section class="container mx-auto my-12 md:my-24">
+  <div
+    class="border-8 border-primary px-4 rounded-xl flex flex-col md:flex-row items-center md:mb-8"
+  >
+    <p class="text-xl md:text-4xl md:mx-12 mx-2 leading-0 py-4 text-center">
+      ¡Si accedes hoy además hay bonos para ti! obtienes de forma 100% GRATUITA
+      de regalo
+    </p>
+  </div>
+  <div class="md:grid md:grid-cols-3 gap-4 items-center">
+    <img src="/laptop.webp" alt="laptop" class="mx-auto" />
+    <div class="flex flex-col gap-8 md:text-2xl my-4 md:col-span-2">
+      <!-- <div>
+        <p class="text-primary font-semibold">
+          🎁 Coaching en mentoría uno a uno Valorado en $300 dólares
+        </p>
+        <p>
+          Recibirás una sesión de acompañamiento durante la creación de tu
+          primera campaña para poner tus anuncios de promoción de tu consulta en
+          Facebook e Instagram yo la haré personalmente contigo clic por clic.
+        </p>
+      </div> -->
+      <div>
+        <p class="text-primary font-semibold">
+          🎁 Crea anuncios potentes Valorado en $500 dólares
+        </p>
+        <p>
+          Conocerás la estrategia que usan grandes empresas para conseguir más
+          pacientes a la semana y llenar sus agendas utilizando Facebook e
+          Instagram ADS. Verás desde las bases: cómo configurar tu cuenta
+          publicitaria, hasta cómo posicionar anuncios que atraigan a tus
+          pacientes, ahorrándote con este conocimiento miles de dólares que te
+          cobraría una agencia de marketing por hacerte esto, porque lo sabrás
+          hacer tú mismo.
+        </p>
+      </div>
+      <div>
+        <p class="text-primary font-semibold">
+          🎁 Templetes de poder Valorado en $200 dólares
+        </p>
+        <p>
+          Este último bono es de ACCION RAPIDA, exclusiva para las personas que
+          se inscriban hoy. Recibirás la bóveda de plantillas digitales y
+          editables que te facilitaran la creación de potentes imágenes de venta
+          que te generen conversiones rápidas en consultas, cuando pongas tus
+          campañas
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-12">
+    <p
+      class="text-xl md:text-4xl md:mx-12 mx-2 leading-0 py-4 px-2 text-center"
+    >
+      Además tienes <span class="text-secondary">7 días de GARANTIA</span>
+       podrás empezar la formación conocer a todos tus compañeros empezar a
+      formarte y si no te gusta lo que vez, si sientes que no es lo tuyo te
+      devuelvo el 100% del importe pagado.
+    </p>
+  </div>
+  <img src="/logo_garantia.webp" alt="laptop" class="mx-auto mt-4" />
+
+  <h1 class="text-xl md:text-4xl mt-2 text-center">
+    El precio regular de este curso online es de <span
+      class="text-primary font-bold">$197 dólares</span
+    >
+     pero al inscribirte hoy, recibes
+    <span class="text-primary font-bold"> un descuento de 50%</span>, por lo que
+    tu inversión seria solo de
+  </h1>
+
+  <Carrouseltestimonios />
+
+  <Ctabutton />
+</section>

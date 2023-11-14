@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<script>
+  const url = "https://pay.hotmart.com/N71490976C?off=ej0fd4kr&checkoutMode=10";
+  const redirectButton = document.querySelectorAll("button");
+  if (redirectButton) {
+    redirectButton.forEach((button) => {
+      button.addEventListener("click", () => window.open(url, "_blank"));
+    });
+  }
+</script>
+
+<h1
+  class="md:text-7xl text-center font-bold mt-4 md:mt-8 text-3xl text-primary underline underline-offset-2"
+>
+  Valor: 497 dólares
+</h1>
+<div class="flex justify-center my-12">
+  <button
+    class="bg-green-600 text-white px-8 py-4 rounded-full font-bold md:text-4xl md:w-[720px] hover:opacity-90 shadow-lg"
+    id="redirect">Da click aquí para ser parte de Aumenta Pacientes</button
+  >
+</div>
+
+<div class="flex gap-8 justify-center items-center flex-wrap mt-4">
+  <Icon name="dashicons:lock" width="64" height="64" />
+  <img src="/paypal.svg" alt="PayPal" class="h-16" />
+  <Icon name="fontisto:american-express" width="64" height="64" />
+  <Icon name="logos:discover" width="64" height="64" />
+  <Icon name="logos:mastercard" width="64" height="64" />
+  <Icon name="logos:visa" width="64" height="64" />
+</div>
