@@ -1,35 +1,27 @@
-<section>
-  <div class="container mx-auto md:my-16 px-4">
-    <h2 class="text-lg md:text-4xl my-2 font-semibold text-primary">
-      Conoce a estos alumnos que tenían las mismas preocupaciones que tu y
-      descubre como lograron superarlas
-    </h2>
-    <h4 class="md:text-2xl my-2 text-primary">
-      Ellos tenían una consulta vacía y empezaron a llenar su agenda de
-      pacientes aplicando el método Incrementa Tu Consulta, para su consultorio
-    </h4>
-  </div>
+---
+import Player from './videoplayer/player.astro';
+---
 
-  <div
-    class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2"
-  >
-    <!-- <Videoplayer videoid={'vSyVhKV4n-s'} />
-            <Videoplayer videoid={'DUTbbtn9vJs'} /> -->
-    <!-- <Videoplayer videoid={'z9CsFqeleUo'} /> -->
-  </div>
-   Insertar Videos
-  <div
-    class="md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2 hidden md:grid"
-  >
-    <!-- <Videoplayer videoid={'4G_j_Qk7Gvc'} />
-                <Videoplayer videoid={'eGORT3A48l0'} />
-                <Videoplayer videoid={'J6PQXxhV_Ks'} /> -->
-  </div>
-  <div
-    class="text-lg md:text-2xl mt-2 md:mt-8 text-primary font-light text-center"
-  >
-    Médico, Profesional de la salud, Ortodoncista, Doctor con especialidad,
-    Nutriólogo, Psicólogos, Psicoterapeuta de parejas, Terapias Holísticas,
-    Coach
-  </div>
+<section>
+	<div class="container mx-auto md:my-16 px-4">
+		<h2 class="text-xl md:text-3xl my-2 font-semibold text-primary">
+			Conoce a estos alumnos que tenían las mismas preocupaciones que tu y descubre como lograron
+			superarlas
+		</h2>
+		<h4 class="md:text-2xl my-2 text-primary">
+			Ellos tenían una consulta vacía y empezaron a llenar su agenda de pacientes aplicando el
+			método Incrementa Tu Consulta, para su consultorio
+		</h4>
+	</div>
+
+	<div class="w-full px-4 md:w-[650px] md:px-0 mx-auto">
+		<Player source="4I9FcVxwv70" />
+	</div>
+
+	<div class="md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2 hidden md:grid">
+	</div>
+	<div class="text-lg md:text-2xl mt-2 md:mt-8 text-primary font-light text-center">
+		Médico, Profesional de la salud, Ortodoncista, Doctor con especialidad, Nutriólogo, Psicólogos,
+		Psicoterapeuta de parejas, Terapias Holísticas, Coach
+	</div>
 </section>

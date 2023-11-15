@@ -1,5 +1,13 @@
-<div class="container md:mt-8">
-  <h2 class="md:text-7xl text-primary font-semibold">¿Serás el próximo?</h2>
+---
+import Player from '../videoplayer/player.astro';
+---
 
-  <div>Videos</div>
+<div class="container md:mt-8">
+	<h2 class="md:text-7xl text-primary font-semibold">¿Serás el próximo?</h2>
+
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 container mx-auto py-12 px-2">
+		<Player source="4I9FcVxwv70" />
+		<Player source="4I9FcVxwv70" />
+		<Player source="4I9FcVxwv70" />
+	</div>
 </div>
