@@ -26,6 +26,7 @@ import HeroMobileBackground from "../../assets/fondo_banner_principal_mobile.png
         alt="background image"
         height={716}
         width={1440}
+        loading={"eager"}
         class="md:absolute hidden md:block -z-10 bg-center w-full max-h-full"
       />
       <div>
@@ -34,6 +35,7 @@ import HeroMobileBackground from "../../assets/fondo_banner_principal_mobile.png
           alt="background image"
           width={431}
           height={1064}
+          loading={"eager"}
           class="md:hidden block -z-10 absolute w-full"
         />
       </div>
@@ -63,7 +65,13 @@ import HeroMobileBackground from "../../assets/fondo_banner_principal_mobile.png
           class="grid grid-cols-1 md:flex md:gap-2 md:justify-center md:items-center"
         >
           <div class="order-last md:order-first py-4 md:py-0">
-            <Image src={FormImage} alt="background image" class="w-full" />
+            <Image
+              src={FormImage}
+              width={495}
+              height={536}
+              alt="formulario image"
+              class="w-full"
+            />
           </div>
           <div class="px-4">
             <HeroForm />
