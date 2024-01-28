@@ -1,0 +1,132 @@
+---
+import { clases } from "./clases.ts";
+import { Image } from "astro:assets";
+import Banner from "../../assets/berenice_middle.png";
+import BottomForm from "./BottomForm.astro";
+---
+
+<section class="py-8 md:py-0">
+  <h2
+    class="md:my-10 font-soap font-bold md:text-4xl text-lg text-azul text-center md:w-[800px] tracking-wider mx-auto mb-8 md:mb-0"
+  >
+    ¿Qué aprenderás en este
+    <br />
+    <span class="text-rosa text-3xl md:text-5xl">entrenamiento?</span>
+  </h2>
+
+  <div class="px-4 md:hidden">
+    {
+      clases.map((et) => {
+        return (
+          <div class="grid items-center gap-4 font-montserrat">
+            <img
+              src={et.image}
+              alt={"Clase"}
+              width={400}
+              height={400}
+              class="rounded-xl "
+            />
+            <div class="mx-4 text-center">
+              <h2 class="md:text-xl text-lg font-soap text-azul">{et.name}</h2>
+              <p class="md:text-4xl text-xl text-naranja font-soap">
+                {et.subtitle}
+              </p>
+              <p>{et.description}</p>
+              <div class="borber-b-2 border border-black w-1/4 mx-auto my-10 md:mb-0" />
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <div class="md:w-3/4 mx-auto hidden md:grid">
+    {
+      clases.map((clase) => {
+        return clase.id % 2 ? (
+          <div class="grid items-center gap-8 mt-8 md:grid-cols-2 md:gap-8 lg:mx-0 lg:grid-cols-2 font-montserrat">
+            <div class="mx-4 text-center">
+              <h2 class="md:text-xl font-soap text-azul">{clase.name}</h2>
+              <p class="md:text-4xl text-naranja font-soap">{clase.subtitle}</p>
+              <p class="text-lg">{clase.description}</p>
+            </div>
+            <img
+              src={clase.image}
+              alt={"Clase"}
+              width={800}
+              height={450}
+              class="rounded-xl md:scale-100 scale-50 shadow-xl"
+            />
+          </div>
+        ) : (
+          <div class="grid items-center gap-4 md:grid-cols-2 md:gap-8 lg:mx-0 lg:grid-cols-2 font-montserrat md:py-12">
+            <img
+              src={clase.image}
+              alt={"Clase"}
+              width={800}
+              height={450}
+              class="rounded-xl md:scale-100 scale-50 shadow-xl "
+            />
+            <div class="mx-4 text-center">
+              <h2 class="md:text-xl font-soap text-azul">{clase.name}</h2>
+              <p class="md:text-4xl text-naranja font-soap">{clase.subtitle}</p>
+              <p class="text-lg">{clase.description}</p>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <div
+    class="md:flex md:justify-end md:items-center md:relative bg-naranja md:bg-transparent my-10 md:my-0"
+  >
+    <Image
+      src={Banner}
+      alt="Banner"
+      class="w-full md:block hidden"
+      height={900}
+    />
+    <div class="text-white md:text-4xl p-4 md:absolute md:w-[320px] md:mr-60">
+      <p class="font-soap text-azul md:text-3xl text-3xl">Hola, soy</p>
+      <p class="font-soap md:text-5xl text-5xl">Berenice</p>
+      <p class="md:text-lg py-4">
+        Soy Psicóloga Berenice Bastidas y descifré como llenar mi agenda medio
+        tiempo, de pacientes durante 3 años seguidos y esto fue antes de
+        dedicarme a ayudar a Nutriólogos, Psicólogos, Terapeutas,
+        Psicoterapeutas y Profesionales de la Salud a poder hacerlo para ellos
+        mismos multiplicando sus ingresos e incrementando su número de pacientes
+        y cuando empiezan desde cero con lo que aprenden en el Entrenamiento
+        Incrementa Tu Consulta, logran su primera venta de consulta en 30 días o
+        menos.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-2 md:mx-0 md:my-20 my-10 font-soap text-azul text-center">
+    <p class="text-lg md:text-2xl">
+      "el <span class="text-2xl md:text-5xl uppercase">Dinero</span> es solo una
+    </p>
+    <p class="text-lg md:text-2xl">
+      parte de la <span class="text-2xl md:text-5xl uppercase align-top"
+        >Riqueza.</span
+      >
+    </p>
+
+    <p class="text-lg md:text-xl text-naranja mt-2 md:mt-4">
+      la verdadera<span class="text-2xl md:text-4xl uppercase"> Riqueza</span> es
+      el <span class="text-2xl md:text-3xl uppercase">tiempo</span> y la
+    </p>
+    <p class="text-lg md:text-xl text-naranja">
+      <span class="text-2xl md:text-4xl uppercase align-top"> Libertad</span> para
+      vivir <span class="align-top text-2xl md:text-3xl uppercase"
+        >la vida que deseas"</span
+      >
+    </p>
+
+    <div class="w-56 border-b-2 border-black mx-auto mt-8"></div>
+    <p class="text-black mt-4 md:mt-8 md:text-3xl text-xl">Robert Kiyosaki</p>
+  </div>
+
+  <BottomForm />
+</section>
