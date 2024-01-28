@@ -5,7 +5,7 @@ export const clases = [
     subtitle: "El Método",
     description:
       'Conocerás en detalle la estructura que utilizan grandes especialistas y agencias de publicidad para atraer pacientes DIARIAMENTE... Y sin necesidad de crear contenido en redes sociales para "ver si llegan personas"',
-    image: "Clase_1.png",
+    image: "Clase_1.webp",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const clases = [
     subtitle: "La comunicacion efectiva",
     description:
       "Te explicaré cuáles son los principios más importantes para conectar con tus futuros pacientes. Aprenderás a evitar errores (algunos ya los estás comentiendo) y te convertirás en un imán de pacientes.",
-    image: "Clase_2.png",
+    image: "Clase_2.webp",
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export const clases = [
     subtitle: "Plan de acción",
     description:
       "Recibirás un paso a paso probado con todo lo más práctico que necesitas para empezar a atraer pacientes a tu consulta privada. ¿Cómo te sentirías si tienes tu agenda llena todos los días? ¡Aquí lo descubrirás!",
-    image: "Clase_3.png",
+    image: "Clase_3.webp",
   },
 ];
