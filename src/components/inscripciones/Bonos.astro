@@ -1,0 +1,130 @@
+---
+import { Image } from "astro:assets";
+import Sesion from "../../assets/sesion_personalizada.png";
+import Plantillas from "../../assets/30_plantillas.png";
+import Coaching from "../../assets/coachin_personalizado.png";
+import { CountDown } from "../counter/countdown";
+import Garantia from "../../assets/garantia.png";
+
+const bonos = [
+  {
+    title: "Sesión Personalizada para Lanzar tu Campaña con Éxito.",
+    description:
+      "Tendrás una sesión de acompañamiento exclusiva durante la creación de tu primera campaña para promocionar tu consulta en Facebook e Instagram. Berenice estará contigo personalmente, guiándote clic por clic en una sesión de 60 a 90 minutos. No importa si no eres un experto en la plataforma o si has tenido campañas sin éxito en el pasado; esta vez, todo será diferente.",
+    value: "VALOR $500 USD",
+    image: Sesion,
+  },
+  {
+    title: "30 Plantillas Editables para Potenciar tus Mensajes.",
+    description:
+      "Obtén acceso a una valiosa colección de 30 plantillas digitales y editables diseñadas para personalizar tus mensajes de manera fácil. Con solo copiar y pegar, podrás crear imágenes de venta impactantes sin necesidad de conocimientos en diseño ni la descarga de programas complicados. Estas plantillas están especialmente diseñadas para generar conversiones rápidas en tus campañas y atraer consultas de manera efectiva. Simplifica tu proceso de creación con esta bóveda de recursos versátil y poderosa.",
+    value: "VALOR $200 USD",
+    image: Plantillas,
+  },
+];
+---
+
+<section class="md:max-w-6xl mx-auto md:my-16">
+  <h1 class="font-soap md:text-4xl text-morado text-center">
+    ADEMÁS TENDRÁS LOS SIGUIENTES
+  </h1>
+  <h1 class="font-soap md:text-7xl text-naranja text-center">
+    BONOS DE REGALO
+  </h1>
+  <div class="grid md:grid-cols-2 md:gap-8 md:my-16">
+    {
+      bonos.map((bono) => (
+        <div class="flex flex-col justify-between ">
+          <div>
+            <Image
+              src={bono.image}
+              alt={bono.title}
+              class="mx-auto"
+              height={251}
+              width={187}
+            />
+            <h2 class="font-soap md:text-4xl text-morado md:mt-8 mt-4">
+              {bono.title}
+            </h2>
+            <p class="md:text-2xl my-4">{bono.description}</p>
+          </div>
+          <p class="font-soap text-naranja md:text-3xl mt-4 md:mt-8 line-through">
+            {bono.value}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+  <div class="md:my-16">
+    <h2 class="font-soap md:text-4xl text-center text-morado">
+      2 bonos de regalo valorados en
+    </h2>
+    <h1 class="font-soap md:text-7xl text-naranja text-center md:my-6">
+      $700 DÓLARES
+    </h1>
+    <h2 class="font-soap md:text-4xl text-center text-morado">
+      completamente gratis
+    </h2>
+    <h2 class="font-soap md:text-4xl text-center md:my-8">
+      MÁS EL BONO DE ACCIÓN RÁPIDA ⏰ PARA LAS 12 PRIMERAS PERSONAS
+    </h2>
+    <Image
+      src={Coaching}
+      alt={"Coaching Personalizado"}
+      class="mx-auto"
+      height={502}
+      width={374}
+    />
+    <h2 class="font-soap md:text-4xl text-center text-morado md:my-8">
+      Coaching de Mentoría Personalizada
+    </h2>
+    <p class="text-center font-montserrat md:text-2xl md:max-w-3xl mx-auto">
+      Experimenta una sesión privada de 45 minutos con la psicóloga Berenice
+      Bastidas, enfocada en tu negocio y proyecto profesional. Juntos explorarán
+      tus acciones actuales, desarrollarán estrategias personalizadas y al
+      finalizar, obtendrás una ruta clara de los pasos que debes seguir para
+      alcanzar los resultados que tanto sueñas. Esta mentoría uno a uno te
+      proporcionará una guía específica y práctica para potenciar tu crecimiento
+      profesional.
+    </p>
+    <h2 class="font-soap text-naranja md:text-3xl mt-4 md:mt-8 text-center">
+      Valor: <span class="line-through">$300 USD</span> COMPLETAMENTE GRATIS
+    </h2>
+    <p class="text-center font-montserrat md:text-2xl md:max-w-xl mx-auto">
+      Este bono desaparecerá cuando el reloj llegue a cero (o tengamos 12
+      registrados)
+    </p>
+    <div class="flex justify-center md:my-8">
+      <CountDown date={"2024-02-15 23:50"} color={false} client:load />
+    </div>
+    <div class="flex flex-col items-center gap-4">
+      <button
+        class="font-montserrat font-black text-lg py-2 px-4 md:py-4 md:px-12 md:text-4xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
+        >QUIERO MI CUPO YA</button
+      >
+      <button
+        class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
+        >¿Necesítas ayuda?</button
+      >
+    </div>
+    <div
+      class="bg-gray-200 grid md:grid-cols-2 md:my-16 md:p-12 items-center md:mx-24 rounded-2xl"
+    >
+      <Image
+        src={Garantia}
+        alt={"Garantia de satisfacción"}
+        class="mx-auto"
+        height={300}
+        width={300}
+      />
+      <div>
+        <h2 class="font-soap md:text-4xl text-center">7 días de garantia</h2>
+        <p class="font-montserrat md:text-2xl text-center mt-4">
+          La garantía está certificada por HOTMART, la mayor plataforma de
+          educación de Latinoamérica y si no quedas satisfech@ te devolverá el
+          100% tu dinero.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

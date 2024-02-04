@@ -1,0 +1,213 @@
+---
+import Videoplayer from "../components/Videoplayer.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Anuncio from "../assets/anuncios_icono.png";
+import Tiempo from "../assets/tiempo_icono.png";
+import Experiencia from "../assets/experiencia_icono.png";
+import Sesiones from "../assets/sesiones_vivo.png";
+import Reuniones from "../assets/reuniones_berenice.png";
+import Contenidos from "../assets/contenido_dinamico.png";
+import Modulos from "../components/inscripciones/Modulos.astro";
+import Beneficios from "../components/inscripciones/Beneficios.astro";
+import Bonos from "../components/inscripciones/Bonos.astro";
+import Testimonios from "../components/inscripciones/Testimonios.astro";
+import Oferta from "../components/inscripciones/Oferta.astro";
+import Preguntas from "../components/inscripciones/Preguntas.astro";
+---
+
+<Layout title="Inscripciones Abiertas">
+  <div class="font-montserrat bg-gray-200 px-4 md:px-0">
+    <div class="md:pt-12 md:pb-56 pb-24 pt-8">
+      <img
+        src="/aumenta_logo.svg"
+        alt="Aumenta Logo"
+        height="217"
+        width="415"
+        class="mx-auto w-[200px] md:w-[415px]"
+      />
+
+      <h1
+        class="font-soap text-center text-morado mt-5 mb-2 md:mt-10 md:mb-5 text-3xl md:text-5xl px-2 md:w-1/2 mx-auto"
+      >
+        Llena tu consulta Privada ¡en solo 21 días!
+      </h1>
+
+      <p class="text-center md:text-2xl px-3 md:px-24 md:w-1/2 mx-auto">
+        Método práctico, aplicable en pocas horas y para especialistas que no
+        cuentan con tiempo.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="md:-translate-y-36 -translate-y-20 md:w-[720px] w-[320px] mx-auto"
+  >
+    <Videoplayer source="https://youtube.com/live/7V2qJHaw2H4" />
+  </div>
+
+  <h2 class="font-soap text-center text-naranja text-3xl md:text-8xl md:mb-36">
+    aprende a
+  </h2>
+  <div class="grid md:grid-cols-3 mt-4 mx-auto px-12 md:px-0 gap-8 md:w-3/4">
+    <div
+      class="flex md:flex-col bg-gray-200 rounded-2xl shadow-sm py-4 items-center md:translate-y-32"
+    >
+      <div class="-translate-x-8 md:-translate-x-0 md:-translate-y-36">
+        <Image src={Anuncio} alt="icono anuncio" width={240} height={200} />
+      </div>
+      <p
+        class="md:text-3xl pr-6 md:pr-0 md:mx-8 md:text-center md:-translate-y-8"
+      >
+        Crear anuncios prácticos y faciles para atraer pacientes todos los días
+        e incrementa tus ingresos
+      </p>
+    </div>
+    <div
+      class="flex md:flex-col bg-gray-200 rounded-xl shadow-lg py-4 items-center md:justify-center"
+    >
+      <div class="-translate-x-10 md:-translate-y-28 md:-translate-x-8">
+        <Image src={Tiempo} alt="icono tiempo" width={240} height={200} />
+      </div>
+      <p
+        class="md:text-3xl pr-6 md:pr-0 md:mx-8 md:text-center md:-translate-y-8"
+      >
+        Optimizar tu tiempo y recursos. Siente la tranquilidad que siempre has
+        soñado.
+      </p>
+    </div>
+    <div
+      class="flex md:flex-col bg-gray-200 rounded-xl shadow-lg py-4 items-center md:translate-y-32"
+    >
+      <div class="-translate-x-8 md:-translate-x-0 md:-translate-y-24">
+        <Image src={Experiencia} alt="icono tiempo" width={240} height={200} />
+      </div>
+      <p
+        class="md:text-3xl pr-6 md:pr-0 md:mx-8 md:text-center md:-translate-y-8"
+      >
+        Mejora la experiencia de los pacientes. Te sentirán más cerca. Es un
+        ganar-ganar
+      </p>
+    </div>
+  </div>
+  <div
+    class="mx-2 bg-naranja my-10 rounded-lg p-4 text-center md:mt-56 md:w-3/4 md:mx-auto border-xl md:p-8"
+  >
+    <h2 class="font-soap text-white text-4xl md:text-6xl">Pago único</h2>
+    <h2 class="font-montserrat font-bold text-5xl md:text-8xl text-amarillo">
+      $297 <span class="text-lg md:text-4xl">dólares</span>
+    </h2>
+    <button
+      class="font-montserrat font-bold text-lg py-2 px-4 md:py-4 md:px-12 md:text-3xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
+      >QUIERO LLENAR MI CONSULTA</button
+    >
+    <p class="text-white my-4 md:text-2xl md:w-1/2 md:mx-auto">
+      Puedes diferir a cuotas con tu tarjeta de crédito para que te quedae más
+      fácil <span class="text-rojo">♥️</span>
+    </p>
+
+    <button
+      class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
+      >¿Necesítas ayuda?</button
+    >
+  </div>
+  <div class="my-10">
+    <h2 class="font-soap text-3xl text-morado text-center my-10">
+      conoce todo el programa
+    </h2>
+    <div class="grid px-12 gap-4 md:hidden">
+      <div
+        class="relative bg-morado items-center p-4 rounded-xl gap-4 shadow-lg"
+      >
+        <Image
+          src={Sesiones}
+          alt="Sessiones en vivo"
+          height={70}
+          class="absolute -left-6"
+        />
+        <p class="uppercase text-white font-bold ml-8 text-center text-lg">
+          Todas las sesiones en vivo
+        </p>
+      </div>
+      <div
+        class="relative bg-morado items-center p-4 rounded-xl gap-4 shadow-lg"
+      >
+        <Image
+          src={Reuniones}
+          alt="Reuniones con Berenice"
+          height={60}
+          class="absolute -left-6"
+        />
+        <p class="uppercase text-white font-bold ml-7 text-center text-lg">
+          Reuniones especiales con Berenice
+        </p>
+      </div>
+      <div
+        class="relative bg-morado items-center p-4 rounded-xl gap-4 shadow-lg"
+      >
+        <Image
+          src={Contenidos}
+          alt="Reuniones con Berenice"
+          height={60}
+          class="absolute -left-6"
+        />
+        <p class="uppercase text-white font-bold ml-7 text-center text-lg">
+          Contenido dinámico y práctico
+        </p>
+      </div>
+    </div>
+
+    <div class="md:grid md:grid-cols-3 px-12 gap-4 hidden md:w-3/4 md:mx-auto">
+      <div
+        class="bg-morado items-center px-4 rounded-xl gap-4 shadow-lg md:w-[300px]"
+      >
+        <Image
+          src={Sesiones}
+          alt="Sessiones en vivo"
+          height={160}
+          class="mx-auto md:translate-x-4 md:-translate-y-8"
+        />
+        <p
+          class="uppercase text-white font-bold md:text-2xl text-center text-lg -translate-y-2"
+        >
+          Todas las sesiones en vivo
+        </p>
+      </div>
+      <div
+        class="bg-morado items-center px-4 rounded-xl gap-4 shadow-lg md:w-[300px]"
+      >
+        <Image
+          src={Reuniones}
+          alt="Reuniones con Berenice"
+          height={140}
+          class="mx-auto md:-translate-y-12"
+        />
+        <p
+          class="uppercase text-white font-bold md:text-2xl text-center text-lg -translate-y-2"
+        >
+          Reuniones especiales con Berenice
+        </p>
+      </div>
+      <div class="bg-morado items-center p-4 rounded-xl gap-4 shadow-lg">
+        <Image
+          src={Contenidos}
+          alt="Reuniones con Berenice"
+          height={120}
+          class="mx-auto md:-translate-y-12"
+        />
+        <p
+          class="uppercase text-white font-bold md:text-2xl text-center text-lg -translate-y-2"
+        >
+          Contenido dinámico y práctico
+        </p>
+      </div>
+    </div>
+    <Modulos />
+    <Beneficios />
+    <Bonos />
+    <Testimonios />
+    <Oferta />
+    <Preguntas />
+  </div>
+</Layout>
+<div class="mt-8"></div>

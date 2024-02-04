@@ -25,6 +25,7 @@ export default {
         rojo: "#FF0000",
         amarillo: "#FFE600",
         rosa: "#F43589",
+        morado: "#7835FF",
       },
       fontFamily: {
         soap: "Soap",
