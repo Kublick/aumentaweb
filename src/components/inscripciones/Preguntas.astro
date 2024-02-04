@@ -1,3 +1,7 @@
+---
+import { PreguntasAccordion } from "./Accordion";
+---
+
 <section>
   <div class="md:max-w-6xl mx-auto md:my-16">
     <h1 class="text-center font-soap text-4xl text-naranja">
@@ -7,5 +11,8 @@
       A continuación, responderé las preguntas más frecuentes que me hacen
       referente al curso:
     </p>
+    <div class="md:my-16">
+      <PreguntasAccordion client:load />
+    </div>
   </div>
 </section>
