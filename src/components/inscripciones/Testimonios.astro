@@ -4,6 +4,23 @@ import Banner from "../../assets/berenice_middle.png";
 import Videoplayer from "../Videoplayer.astro";
 ---
 
+<script>
+  const el = document.getElementById("llenaConsultat");
+  const whatsapp = document.getElementById("whatsappt");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
 <section>
   <div
     class="md:flex md:justify-end md:items-center md:relative bg-naranja md:bg-transparent my-10 md:my-0"
@@ -43,6 +60,7 @@ import Videoplayer from "../Videoplayer.astro";
 
     <div class="flex flex-col items-center md:gap-8">
       <button
+        id="llenaConsultat"
         class="font-montserrat font-black text-lg py-2 px-4 md:py-8 md:px-24 md:text-6xl mt-4 text-white bg-verde rounded-2xl hover:bg-green-600"
         >DA CLICK AQUI <br />
 
@@ -51,6 +69,7 @@ import Videoplayer from "../Videoplayer.astro";
         >
       </button>
       <button
+        id="whatsappt"
         class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
         >¿Necesítas ayuda?</button
       >

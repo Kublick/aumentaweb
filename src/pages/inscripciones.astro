@@ -17,6 +17,23 @@ import Preguntas from "../components/inscripciones/Preguntas.astro";
 import Footer from "../components/Footer.astro";
 ---
 
+<script>
+  const el = document.getElementById("llenaConsulta");
+  const whatsapp = document.getElementById("whatsapp");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
 <Layout title="Inscripciones Abiertas">
   <div class="font-montserrat bg-gray-200 px-4 md:px-0">
     <div class="md:pt-12 md:pb-56 pb-24 pt-8">
@@ -99,6 +116,7 @@ import Footer from "../components/Footer.astro";
       $297 <span class="text-lg md:text-4xl">dólares</span>
     </h2>
     <button
+      id="llenaConsulta"
       class="font-montserrat font-bold text-lg py-2 px-4 md:py-4 md:px-12 md:text-3xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
       >QUIERO LLENAR MI CONSULTA</button
     >
@@ -108,6 +126,7 @@ import Footer from "../components/Footer.astro";
     </p>
 
     <button
+      id="whatsapp"
       class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
       >¿Necesítas ayuda?</button
     >

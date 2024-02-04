@@ -51,6 +51,23 @@ const beneficios = [
 ];
 ---
 
+<script>
+  const el = document.getElementById("llenaConsultab");
+  const whatsapp = document.getElementById("whatsappb");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
 <section class="md:max-w-6xl mx-auto">
   <h1 class="md:text-4xl text-morado font-soap text-center">
     ¿QUÉ RECIBIRÁS SIENDO PARTE DEL
@@ -91,14 +108,12 @@ const beneficios = [
       Por solo <span class="text-6xl font-montserrat">$297</span> dolares
     </h1>
     <button
+      id="llenaConsultab"
       class="font-montserrat font-black text-lg py-2 px-4 md:py-4 md:px-12 md:text-4xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
       >QUIERO MI CUPO YA</button
     >
     <button
-      class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
-      >¿Necesítas ayuda?</button
-    >
-    <button
+      id="whatsappb"
       class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
       >¿Necesítas ayuda?</button
     >
