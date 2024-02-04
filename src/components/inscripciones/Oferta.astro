@@ -1,0 +1,136 @@
+---
+import { Image } from "astro:assets";
+import Mockgeneral from "../../assets/mockup_general.png";
+import { oferta, bonos, bonoaccionrapida } from "./ofertadata";
+---
+
+<script>
+  const el = document.getElementById("llenaConsultao");
+  const whatsapp = document.getElementById("whatsappo");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
+<style>
+  span.short::after {
+    content: " ";
+    flex: 1;
+    border-bottom: 2px dotted #000;
+    margin: 0 1rem;
+  }
+  span.short {
+    font-size: 0.8rem;
+    font-style: italic;
+    flex: 1;
+    display: flex;
+  }
+</style>
+
+<section>
+  <div class="md:max-w-6xl mx-auto">
+    <Image src={Mockgeneral} alt="Mockup of the general" />
+    <h1 class="font-soap text-center text-5xl md:mt-16">
+      todo lo que recibirás
+    </h1>
+    <div class="mx-4 md:mx-14 md:my-8">
+      {
+        oferta.map((o) => (
+          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
+            <p class={o.bold ? " w-52 md:w-auto font-bold" : "w-52 md:w-auto"}>
+              {o.title}
+            </p>
+            <span class="short" />
+            <div class="flex gap-1">
+              <p class={o.value ? "block" : "hidden"}>Valor</p>
+
+              <p class="text-rojo font-bold">{o.price}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mx-4 md:mx-14 md:my-8">
+      <h1 class="font-soap text-naranja text-center text-5xl md:mt-16">
+        bonos
+      </h1>
+      {
+        bonos.map((o) => (
+          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
+            <p class="w-52 md:w-auto">{o.title}</p>
+            <span class="short" />
+            <div class="flex gap-1">
+              <p class={o.value ? "block" : "hidden"}>Valor</p>
+
+              <p class="text-rojo font-bold">{o.price}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mx-4 md:mx-14 md:my-8">
+      <h1 class="font-soap text-naranja text-center text-5xl md:mt-16">
+        Bonos de acción rápida
+      </h1>
+      {
+        bonoaccionrapida.map((o) => (
+          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
+            <p class="w-52 md:w-auto">{o.title}</p>
+            <span class="short" />
+            <div class="flex gap-1">
+              <p class={o.value ? "block" : "hidden"}>Valor</p>
+
+              <p class="text-rojo font-bold">{o.price}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="font-montserrat mx-auto text-center">
+      <h1 class="text-rojo md:text-4xl line-through">
+        Total <span class="font-black">$1,997 USD</span>
+      </h1>
+      <h2 class="text-rojo md:text-4xl line-through">
+        Precio normal <span>$597 USD</span>
+      </h2>
+      <h1 class="md:text-3xl md:mt-2">
+        Precio de lanzamiento <span class="md:text-6xl text-verde font-black"
+          >$297 USD</span
+        >
+      </h1>
+      <div class="flex gap-2 justify-center items-center md:my-8">
+        <h1 class="font-soap text-4xl text-naranja">OFERTA</h1>
+        <p
+          class="font-black bg-naranja py-2 md:px-8 px-4 md:text-2xl text-white rounded-xl"
+        >
+          40% <span class="font-normal text-xl">de descuento</span>
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center md:gap-8">
+      <button
+        id="llenaConsultao"
+        class="font-montserrat font-black text-lg py-2 px-4 md:py-8 md:px-24 md:text-6xl mt-4 text-white bg-verde rounded-2xl hover:bg-green-600"
+        >DA CLICK AQUI <br />
+
+        <span class="md:text-2xl font-normal"
+          >Conoce las facilidades de pago 3, 6, 9 o 12 pagos chiquitos.</span
+        >
+      </button>
+      <button
+        id="whatsappo"
+        class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
+        >¿Necesítas ayuda?</button
+      >
+    </div>
+  </div>
+</section>

@@ -1,11 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+  ],
+  prefix: "",
   theme: {
     extend: {
       animation: {
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
         marquee: {
@@ -16,6 +26,14 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       colors: {
         azul: "#202E83",
@@ -25,6 +43,7 @@ export default {
         rojo: "#FF0000",
         amarillo: "#FFE600",
         rosa: "#F43589",
+        morado: "#7835FF",
       },
       fontFamily: {
         soap: "Soap",
@@ -33,5 +52,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

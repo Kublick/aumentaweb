@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+import Soporte from "../../assets/soporte_y_ayuda.png";
+import Ticket from "../../assets/ticket_VIP_anual.png";
+import Mobile from "../../assets/app_movil.png";
+import Plan from "../../assets/plan_estudios.png";
+import Membresia from "../../assets/membresia_comunidad_internacional.png";
+
+const beneficios = [
+  {
+    title: "Servicio de Soporte y Ayuda",
+    value: "Valor 200 USD",
+    description:
+      "Acceso a nuestra comunidad de alumnos durante 30 días, donde puedes plantear tus preguntas y comentarios. Personalmente, Berenice atenderá todas tus solicitudes",
+    image: Soporte,
+    hidden: false,
+  },
+  {
+    title: "Ticket VIP Anual",
+    value: "Valor 100 USD",
+    description:
+      "Obtén acceso completo a la grabación del programa durante 12 meses. Puedes elegir tus propios horarios para ver la repetición del curso en la plataforma y sus actualizaciones.",
+    image: Ticket,
+    hidden: false,
+  },
+  {
+    title: "App Mobile",
+    value: "Valor 50 USD",
+    description:
+      "Visualiza el curso desde cualquier dispositivo móvil, ya sea smartphone o tablet, en cualquier momento y lugar que te resulte conveniente. Esta aplicación es completamente gratuita para nuestros alumnos.",
+    image: Mobile,
+    hidden: false,
+  },
+  {
+    title: "Plan de estudios",
+    value: "Valor 50 USD",
+    description:
+      "Recibe un plan de estudios con ejercicios 100% prácticos y metas semanales de trabajo que acelerarán tus resultados. Este plan te guiará y facilitará el crecimiento de tu negocio de consulta privada presencial.",
+    image: Plan,
+    hidden: false,
+  },
+  {
+    title: "Membresía en la Comunidad Internacional",
+    value: "",
+    extra: "Invaluable",
+    description:
+      "Únete a un grupo exclusivo e internacional de alumnos profesionales durante un año. Esta membresía te brinda la oportunidad de establecer conexiones internacionales con expertos de diferentes países y explorar posibles colaboraciones futuras. Dentro de la comunidad, encontrarás espacios para compartir tus logros y avances. Tendrás una tribu que te acompañará las 24 horas del día, brindándote motivación y apoyo constante en tu proceso. Nunca te sentirás solo en esta travesía.",
+    image: Membresia,
+    hidden: true,
+  },
+];
+---
+
+<script>
+  const el = document.getElementById("llenaConsultab");
+  const whatsapp = document.getElementById("whatsappb");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
+<section class="md:max-w-6xl mx-auto">
+  <h1 class="md:text-4xl text-morado font-soap text-center">
+    ¿QUÉ RECIBIRÁS SIENDO PARTE DEL
+  </h1>
+  <h1 class="text-naranja md:text-5xl font-soap text-center mt-1">
+    MÉTODO AUMENTA PACIENTES?
+  </h1>
+  <div class="grid md:grid-cols-3 gap-4 md:my-16">
+    {
+      beneficios.map((beneficio) => (
+        <>
+          <div class="bg-morado h-full flex items-center justify-center rounded-xl p-2">
+            <Image src={beneficio.image} alt={beneficio.title} height={200} />
+          </div>
+          <div class="bg-morado rounded-lg text-white p-4 col-span-2 h-full flex flex-col justify-center">
+            <h1 class="font-soap text-2xl">{beneficio.title}</h1>
+            <div class="flex gap-2 font-montserrat text-2xl font-semibold">
+              <h2 class="line-through text-amarillo ">
+                {beneficio.value}
+                <h2
+                  class={`text-white ${beneficio.hidden ? "hidden" : "block"}`}
+                >
+                  GRATIS
+                </h2>
+              </h2>
+            </div>
+            <h2 class="font-montserrat text-2xl font-black uppercase text-amarillo ">
+              {beneficio.extra}
+            </h2>
+            <p class="my-2">{beneficio.description} </p>
+          </div>
+        </>
+      ))
+    }
+  </div>
+  <div class="flex flex-col items-center gap-4">
+    <h1 class="text-morado text-4xl font-nunito text-center font-black">
+      Por solo <span class="text-6xl font-montserrat">$297</span> dolares
+    </h1>
+    <button
+      id="llenaConsultab"
+      class="font-montserrat font-black text-lg py-2 px-4 md:py-4 md:px-12 md:text-4xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
+      >QUIERO MI CUPO YA</button
+    >
+    <button
+      id="whatsappb"
+      class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
+      >¿Necesítas ayuda?</button
+    >
+  </div>
+</section>

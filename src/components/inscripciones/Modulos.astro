@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Mockgeneral from "../../assets/mockup_general.png";
+import MetodoAumenta from "../../assets/metodo_aumenta_pacientes.png";
+import Modulo1 from "../../assets/modulo1.png";
+import Modulo2 from "../../assets/modulo2.png";
+import Modulo3 from "../../assets/modulo3.png";
+import Modulo4 from "../../assets/modulo4.png";
+
+const modulos = [
+  {
+    header: "Módulo 1",
+    title: "Contenido Eficaz",
+    description:
+      "Aprenderás a crear contenido atractivo para captar la atención de tus potenciales pacientes (no tienes que grabar videos, ni bailar en TikTok, ni perder horas diseñando)",
+    image: Modulo1,
+  },
+  {
+    header: "Módulo 2",
+    title: "Mensajes magnéticos",
+    description:
+      "Conocerás cómo conectar con tu paciente ideal. Te revelaré la fórmula para atraer a aquellos dispuestos a invertir en tus servicios de consulta",
+    image: Modulo2,
+  },
+  {
+    header: "Módulo 3",
+    title: "Muéstrate Efectivamente",
+    description:
+      "Aquí verás el paso a paso para promocionar tu consulta en Facebook e Instagram sin necesidad de contratar agencias de marketing (ahorra miles de dólares). Es más fácil de lo que imaginas",
+    image: Modulo3,
+  },
+  {
+    header: "Módulo 4",
+    title: "Concreta Tu Cita",
+    description:
+      'La cereza del pastel: cómo responder de manera efectiva cuando te piden información. Evita el temido "visto" en WhatsApp y el "no me interesa, gracias". Aprende a ganarte la confianza de tu paciente y llena tus consultas privadas. (Y no te preocupes, no parecerás un vendedor)',
+    image: Modulo4,
+  },
+];
+---
+
+<div class="md:max-w-6xl mx-auto md:mt-16">
+  <Image src={Mockgeneral} alt="Mockup general" class="mx-auto" />
+  <div class="flex gap-8">
+    <Image src={MetodoAumenta} alt="Metodo Aumenta" class="mx-auto" />
+  </div>
+  <p class="md:text-2xl text-center">
+    Descubre cómo atraer más pacientes a tu consultorio cada día con nuestro
+    programa intensivo de 4 semanas. Aprenderás la estrategia completa para
+    mejorar tus consultas semanales y multiplicar tus ingresos. Además, nos
+    reuniremos cada semana en vivo por Zoom para hacer seguimiento de tus
+    avances y responder a todas tus preguntas.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8 mx-auto md:my-16">
+    {
+      modulos.map((modulo) => (
+        <div class="">
+          <Image
+            src={modulo.image}
+            alt={modulo.image.src}
+            class="rounded-xl shadow-lg mb-4"
+          />
+          <h2 class="font-soap md:text-2xl text-naranja">{modulo.header}</h2>
+          <h2 class="font-soap md:text-3xl text-morado">{modulo.title}</h2>
+          <p class="text-lg my-4">{modulo.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>

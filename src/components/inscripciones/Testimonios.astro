@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import Banner from "../../assets/berenice_middle.png";
+import Videoplayer from "../Videoplayer.astro";
+---
+
+<script>
+  const el = document.getElementById("llenaConsultat");
+  const whatsapp = document.getElementById("whatsappt");
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href =
+        "https://pay.hotmart.com/N71490976C?off=pklqxrve&checkoutMode=10";
+    });
+  }
+
+  if (whatsapp) {
+    whatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/message/LD54V7JCH3TXD1");
+    });
+  }
+</script>
+
+<section>
+  <div
+    class="md:flex md:justify-end md:items-center md:relative bg-naranja md:bg-transparent my-10 md:my-0"
+  >
+    <Image
+      src={Banner}
+      alt="Banner"
+      class="w-full md:block hidden"
+      height={900}
+    />
+    <div class="text-white md:text-4xl p-4 md:absolute md:w-[320px] md:mr-60">
+      <p class="font-soap text-azul md:text-3xl text-3xl">Hola, soy</p>
+      <p class="font-soap md:text-5xl text-5xl">Berenice</p>
+      <p class="md:text-lg py-4">
+        Soy Psicóloga Berenice Bastidas y descifré como llenar mi agenda medio
+        tiempo, de pacientes durante 3 años seguidos y esto fue antes de
+        dedicarme a ayudar a Nutriólogos, Psicólogos, Terapeutas,
+        Psicoterapeutas y Profesionales de la Salud a poder hacerlo para ellos
+        mismos multiplicando sus ingresos e incrementando su número de pacientes
+        y cuando empiezan desde cero con lo que aprenden en el Entrenamiento
+        Incrementa Tu Consulta, logran su primera venta de consulta en 30 días o
+        menos.
+      </p>
+    </div>
+  </div>
+  <div class="md:max-w-6xl md:my-16 mx-auto">
+    <h1 class="font-soap md:text-5xl text-naranja text-center">
+      Ellos ya tomaron acción
+    </h1>
+    <h2 class="font-soap md:text-4xl text-center">¿Serás el próximo?</h2>
+
+    <div class="grid md:grid-cols-3 md:gap-16 md:my-16">
+      <Videoplayer source="https://youtu.be/RovCZO68eRA?si=xQASrKAgtY-GPujN" />
+      <Videoplayer source="https://youtu.be/T9bFZSCnWSo?si=64Wlszggveh-Gvio" />
+      <Videoplayer source="https://youtu.be/kU8QkGrZqeM?si=Lxw6BkF9qu-FzJyD" />
+    </div>
+
+    <div class="flex flex-col items-center md:gap-8">
+      <button
+        id="llenaConsultat"
+        class="font-montserrat font-black text-lg py-2 px-4 md:py-8 md:px-24 md:text-6xl mt-4 text-white bg-verde rounded-2xl hover:bg-green-600"
+        >DA CLICK AQUI <br />
+
+        <span class="md:text-2xl font-normal"
+          >Conoce las facilidades de pago 3, 6, 9 o 12 pagos chiquitos.</span
+        >
+      </button>
+      <button
+        id="whatsappt"
+        class="font-montserrat text-lg py-2 px-4 md:text-3xl md:py-4 md:px-12 text-white bg-rojo rounded-lg hover:bg-red-600"
+        >¿Necesítas ayuda?</button
+      >
+    </div>
+  </div>
+</section>
