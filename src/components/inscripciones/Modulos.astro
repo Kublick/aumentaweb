@@ -39,8 +39,8 @@ const modulos = [
 ];
 ---
 
-<div class="md:max-w-6xl mx-auto md:mt-16">
-  <Image src={Mockgeneral} alt="Mockup general" class="mx-auto" />
+<div class="md:max-w-6xl mx-auto md:mt-16 px-8 md:px-0 my-4">
+  <Image src={Mockgeneral} alt="Mockup general" class="mx-auto mb-4 md:mb-0" />
   <div class="flex gap-8">
     <Image src={MetodoAumenta} alt="Metodo Aumenta" class="mx-auto" />
   </div>
@@ -51,7 +51,7 @@ const modulos = [
     reuniremos cada semana en vivo por Zoom para hacer seguimiento de tus
     avances y responder a todas tus preguntas.
   </p>
-  <div class="grid md:grid-cols-2 gap-8 mx-auto md:my-16">
+  <div class="grid md:grid-cols-2 gap-8 mx-auto md:my-16 my-4">
     {
       modulos.map((modulo) => (
         <div class="">
@@ -60,8 +60,12 @@ const modulos = [
             alt={modulo.image.src}
             class="rounded-xl shadow-lg mb-4"
           />
-          <h2 class="font-soap md:text-2xl text-naranja">{modulo.header}</h2>
-          <h2 class="font-soap md:text-3xl text-morado">{modulo.title}</h2>
+          <h2 class="font-soap md:text-2xl text-naranja text-lg">
+            {modulo.header}
+          </h2>
+          <h2 class="font-soap md:text-3xl text-morado text-xl">
+            {modulo.title}
+          </h2>
           <p class="text-lg my-4">{modulo.description}</p>
         </div>
       ))

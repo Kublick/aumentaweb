@@ -41,17 +41,17 @@ const bonos = [
   }
 </script>
 
-<section class="md:max-w-6xl mx-auto md:my-16">
-  <h1 class="font-soap md:text-4xl text-morado text-center">
+<section class="md:max-w-6xl mx-auto md:my-16 my-8 px-6">
+  <h1 class="font-soap text-2xl md:text-4xl text-morado text-center">
     ADEMÁS TENDRÁS LOS SIGUIENTES
   </h1>
-  <h1 class="font-soap md:text-7xl text-naranja text-center">
+  <h1 class="font-soap md:text-7xl text-naranja text-center text-5xl">
     BONOS DE REGALO
   </h1>
-  <div class="grid md:grid-cols-2 md:gap-8 md:my-16">
+  <div class="grid md:grid-cols-2 md:gap-8 md:my-16 my-8">
     {
       bonos.map((bono) => (
-        <div class="flex flex-col justify-between ">
+        <div class="flex flex-col justify-between mt-4 md:mt-0">
           <div>
             <Image
               src={bono.image}
@@ -60,12 +60,12 @@ const bonos = [
               height={251}
               width={187}
             />
-            <h2 class="font-soap md:text-4xl text-morado md:mt-8 mt-4">
+            <h2 class="font-soap md:text-4xl text-morado md:mt-8 mt-4 text-2xl">
               {bono.title}
             </h2>
-            <p class="md:text-2xl my-4">{bono.description}</p>
+            <p class="md:text-2xl my-4 text-lg">{bono.description}</p>
           </div>
-          <p class="font-soap text-naranja md:text-3xl mt-4 md:mt-8 line-through">
+          <p class="font-soap text-naranja md:text-3xl text-xl mt-4 md:mt-8 line-through">
             {bono.value}
           </p>
         </div>
@@ -73,29 +73,31 @@ const bonos = [
     }
   </div>
   <div class="md:my-16">
-    <h2 class="font-soap md:text-4xl text-center text-morado">
+    <h2 class="font-soap md:text-4xl text-center text-morado text-2xl">
       2 bonos de regalo valorados en
     </h2>
-    <h1 class="font-soap md:text-7xl text-naranja text-center md:my-6">
+    <h1 class="font-soap md:text-7xl text-naranja text-center md:my-6 text-4xl">
       $700 DÓLARES
     </h1>
-    <h2 class="font-soap md:text-4xl text-center text-morado">
+    <h2 class="font-soap md:text-4xl text-center text-morado text-2xl">
       completamente gratis
     </h2>
-    <h2 class="font-soap md:text-4xl text-center md:my-8">
+    <h2 class="font-soap md:text-4xl text-center md:my-8 text-2xl">
       MÁS EL BONO DE ACCIÓN RÁPIDA ⏰ PARA LAS 12 PRIMERAS PERSONAS
     </h2>
     <Image
       src={Coaching}
       alt={"Coaching Personalizado"}
-      class="mx-auto"
+      class="mx-auto my-4 md:mt-0"
       height={502}
       width={374}
     />
-    <h2 class="font-soap md:text-4xl text-center text-morado md:my-8">
+    <h2 class="font-soap md:text-4xl text-center text-morado md:my-8 text-2xl">
       Coaching de Mentoría Personalizada
     </h2>
-    <p class="text-center font-montserrat md:text-2xl md:max-w-3xl mx-auto">
+    <p
+      class="text-center font-montserrat md:text-2xl md:max-w-3xl mx-auto text-lg"
+    >
       Experimenta una sesión privada de 45 minutos con la psicóloga Berenice
       Bastidas, enfocada en tu negocio y proyecto profesional. Juntos explorarán
       tus acciones actuales, desarrollarán estrategias personalizadas y al
@@ -111,10 +113,10 @@ const bonos = [
       Este bono desaparecerá cuando el reloj llegue a cero (o tengamos 12
       registrados)
     </p>
-    <div class="flex justify-center md:my-8">
+    <div class="md:flex md:justify-center md:my-8 my-4">
       <CountDown date={"2024-02-15 23:50"} color={false} client:load />
     </div>
-    <div class="flex flex-col items-center gap-4">
+    <div class="flex flex-col items-center gap-4 mb-8 md:mb-0">
       <button
         id="llenaConsultaa"
         class="font-montserrat font-black text-lg py-2 px-4 md:py-4 md:px-12 md:text-4xl mt-4 text-white bg-verde rounded-lg hover:bg-green-600"
@@ -127,7 +129,7 @@ const bonos = [
       >
     </div>
     <div
-      class="bg-gray-200 grid md:grid-cols-2 md:my-16 md:p-12 items-center md:mx-24 rounded-2xl"
+      class="bg-[#f2f2f2] grid md:grid-cols-2 md:my-16 md:p-12 items-center md:mx-24 rounded-2xl p-4"
     >
       <Image
         src={Garantia}
@@ -137,8 +139,10 @@ const bonos = [
         width={300}
       />
       <div>
-        <h2 class="font-soap md:text-4xl text-center">7 días de garantia</h2>
-        <p class="font-montserrat md:text-2xl text-center mt-4">
+        <h2 class="font-soap md:text-4xl text-center mt-4 md:mt-0 text-2xl">
+          7 días de garantia
+        </h2>
+        <p class="font-montserrat md:text-2xl text-center mt-4 text-lg">
           La garantía está certificada por HOTMART, la mayor plataforma de
           educación de Latinoamérica y si no quedas satisfech@ te devolverá el
           100% tu dinero.

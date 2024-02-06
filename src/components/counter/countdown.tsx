@@ -9,7 +9,7 @@ type Props = {
 export const CountDown = ({ date = "2024-02-15 23:50", color }: Props) => {
   return (
     <FlipClockCountdown
-      className={color ? "flip-clock" : "flip-clock-black"}
+      className={"flip-clock-black"}
       to={new Date(date)}
       digitBlockStyle={{ fontSize: 56, fontFamily: "Soap" }}
       showLabels={true}
