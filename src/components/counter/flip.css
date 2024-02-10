@@ -30,9 +30,10 @@
   --fcc-separator-color: black; /* color of colon */
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .flip-clock-black {
-    --fcc-digit-block-width: 32px;
+    --fcc-digit-block-width: 34px;
     --fcc-label-font-size: 10px; /* adjust this value as needed */
+    --fcc-separator-size: 0px; /* adjust this value as needed */
   }
 }

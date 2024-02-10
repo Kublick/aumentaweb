@@ -113,10 +113,8 @@ const bonos = [
       Este bono desaparecerá cuando el reloj llegue a cero (o tengamos 12
       registrados)
     </p>
-    <div class="md:flex md:justify-center md:my-8 my-4">
-      <div class="mt-8 flex justify-center">
-        <CountDown date={"2024-02-15 23:50"} mobile={true} client:load />
-      </div>
+    <div class="flex justify-center md:my-8 my-4">
+      <CountDown date={"2024-02-15 23:50"} mobile={true} client:only="react" />
     </div>
     <div class="flex flex-col items-center gap-4 mb-8 md:mb-0">
       <button
