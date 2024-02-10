@@ -36,79 +36,90 @@ import { oferta, bonos, bonoaccionrapida } from "./ofertadata";
   }
 </style>
 
-<section>
+<section class="px-6 md:px-0">
   <div class="md:max-w-6xl mx-auto">
     <Image src={Mockgeneral} alt="Mockup of the general" />
-    <h1 class="font-soap text-center text-5xl md:mt-16">
+    <h1 class="font-soap text-center md:text-5xl md:mt-16 text-2xl mt-4">
       todo lo que recibirás
     </h1>
-    <div class="mx-4 md:mx-14 md:my-8">
+    <div class="md:mx-14 md:my-8">
       {
         oferta.map((o) => (
-          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
-            <p class={o.bold ? " w-52 md:w-auto font-bold" : "w-52 md:w-auto"}>
+          <div class="flex items-center justify-between font-montserrat lg:mx-12 lg:text-2xl">
+            <p
+              class={
+                o.bold
+                  ? " w-auto font-bold text-sm md:text-base"
+                  : " w-auto text-sm md:text-base"
+              }
+            >
               {o.title}
             </p>
             <span class="short" />
             <div class="flex gap-1">
-              <p class={o.value ? "block" : "hidden"}>Valor</p>
+              <p class={o.value ? "block text-sm" : "hidden"}>Valor</p>
 
-              <p class="text-rojo font-bold">{o.price}</p>
+              <p class="text-rojo font-bold text-sm md:text-base">{o.price}</p>
             </div>
           </div>
         ))
       }
     </div>
-    <div class="mx-4 md:mx-14 md:my-8">
-      <h1 class="font-soap text-naranja text-center text-5xl md:mt-16">
+    <div class="md:mx-14 md:my-8 my-4">
+      <h1
+        class="font-soap text-naranja text-center text-2xl md:text-5xl md:mt-16"
+      >
         bonos
       </h1>
       {
         bonos.map((o) => (
-          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
-            <p class="w-52 md:w-auto">{o.title}</p>
+          <div class="flex items-center justify-between font-montserrat lg:mx-12 lg:text-2xl">
+            <p class="w-auto text-sm md:text-base">{o.title}</p>
             <span class="short" />
             <div class="flex gap-1">
-              <p class={o.value ? "block" : "hidden"}>Valor</p>
+              <p class={o.value ? "block text-sm" : "hidden"}>Valor</p>
 
-              <p class="text-rojo font-bold">{o.price}</p>
+              <p class="text-rojo font-bold text-sm md:text-base">{o.price}</p>
             </div>
           </div>
         ))
       }
     </div>
-    <div class="mx-4 md:mx-14 md:my-8">
-      <h1 class="font-soap text-naranja text-center text-5xl md:mt-16">
+    <div class="md:mx-14 md:my-8">
+      <h1
+        class="font-soap text-naranja text-center text-2xl md:text-5xl md:mt-16"
+      >
         Bonos de acción rápida
       </h1>
       {
         bonoaccionrapida.map((o) => (
-          <div class="stuff show flex items-center justify-between font-inter lg:mx-12 lg:text-2xl">
-            <p class="w-52 md:w-auto">{o.title}</p>
+          <div class="flex items-center justify-between font-montserrat lg:mx-12 lg:text-2xl">
+            <p class="md:w-auto text-sm md:text-base">{o.title}</p>
             <span class="short" />
             <div class="flex gap-1">
-              <p class={o.value ? "block" : "hidden"}>Valor</p>
-
-              <p class="text-rojo font-bold">{o.price}</p>
+              <p class={o.value ? "block text-sm md:text-base" : "hidden"}>
+                Valor
+              </p>
+              <p class="text-rojo font-bold text-sm md:text-base">{o.price}</p>
             </div>
           </div>
         ))
       }
     </div>
-    <div class="font-montserrat mx-auto text-center">
-      <h1 class="text-rojo md:text-4xl line-through">
+    <div class="font-montserrat mx-auto text-center mt-4">
+      <h1 class="text-rojo md:text-4xl line-through text-2xl">
         Total <span class="font-black">$1,997 USD</span>
       </h1>
-      <h2 class="text-rojo md:text-4xl line-through">
-        Precio normal <span>$597 USD</span>
+      <h2 class="text-rojo md:text-4xl text-2xl line-through">
+        Precio normal <span>$497 USD</span>
       </h2>
-      <h1 class="md:text-3xl md:mt-2">
-        Precio de lanzamiento <span class="md:text-6xl text-verde font-black"
-          >$297 USD</span
+      <h1 class="md:text-3xl text-xl md:mt-2 tracking-wide my-4 md:my-0">
+        Precio de lanzamiento <span
+          class="md:text-6xl text-4xl text-verde font-black">$297 USD</span
         >
       </h1>
-      <div class="flex gap-2 justify-center items-center md:my-8">
-        <h1 class="font-soap text-4xl text-naranja">OFERTA</h1>
+      <div class="flex gap-2 justify-center items-center md:my-8 my-4">
+        <h1 class="font-soap md:text-4xl text-2xl text-naranja">OFERTA</h1>
         <p
           class="font-black bg-naranja py-2 md:px-8 px-4 md:text-2xl text-white rounded-xl"
         >
@@ -116,7 +127,7 @@ import { oferta, bonos, bonoaccionrapida } from "./ofertadata";
         </p>
       </div>
     </div>
-    <div class="flex flex-col items-center md:gap-8">
+    <div class="flex flex-col items-center md:gap-8 gap-4">
       <button
         id="llenaConsultao"
         class="font-montserrat font-black text-lg py-2 px-4 md:py-8 md:px-24 md:text-6xl mt-4 text-white bg-verde rounded-2xl hover:bg-green-600"

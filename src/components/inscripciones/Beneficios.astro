@@ -68,21 +68,26 @@ const beneficios = [
   }
 </script>
 
-<section class="md:max-w-6xl mx-auto">
-  <h1 class="md:text-4xl text-morado font-soap text-center">
+<section class="md:max-w-6xl mx-auto px-6 md:px-0">
+  <h1 class="md:text-4xl text-2xl text-morado font-soap text-center">
     ¿QUÉ RECIBIRÁS SIENDO PARTE DEL
   </h1>
-  <h1 class="text-naranja md:text-5xl font-soap text-center mt-1">
+  <h1 class="text-naranja md:text-5xl text-3xl font-soap text-center mt-1">
     MÉTODO AUMENTA PACIENTES?
   </h1>
-  <div class="grid md:grid-cols-3 gap-4 md:my-16">
+  <div class="grid md:grid-cols-3 gap-4 md:my-16 my-4">
     {
       beneficios.map((beneficio) => (
         <>
-          <div class="bg-morado h-full flex items-center justify-center rounded-xl p-2">
-            <Image src={beneficio.image} alt={beneficio.title} height={200} />
+          <div class=" h-full rounded-xl w-full bg-morado p-4 md:block hidden ">
+            <Image
+              src={beneficio.image}
+              alt={beneficio.title}
+              height={200}
+              class="mx-auto"
+            />
           </div>
-          <div class="bg-morado rounded-lg text-white p-4 col-span-2 h-full flex flex-col justify-center">
+          <div class="bg-morado rounded-lg text-white p-4 md:col-span-2 h-full flex flex-col justify-center">
             <h1 class="font-soap text-2xl">{beneficio.title}</h1>
             <div class="flex gap-2 font-montserrat text-2xl font-semibold">
               <h2 class="line-through text-amarillo ">
