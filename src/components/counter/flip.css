@@ -1,16 +1,25 @@
 .flip-clock {
   --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+
   --fcc-digit-block-width: 36px; /* width of digit card */
   --fcc-digit-block-height: 56px; /* height of digit card, highly recommend in even number */
   /* --fcc-digit-font-size: 30px; font size of digit */
-  --fcc-digit-color: black; /* color of digit */
-  --fcc-label-font-size: 10px; /* font size of label */
-  --fcc-label-color: #ffffff; /* color of label */
+  --fcc-digit-color: #202e83; /* color of digit */
+  --fcc-label-font-size: 16px; /* font size of label */
+  --fcc-label-color: #202e83; /* color of label  */
   --fcc-background: white; /* background of digit card */
-  /* --fcc-divider-color: white; color of divider */
+  --fcc-divider-color: #202e83;
   --fcc-divider-height: 0px; /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: white; /* color of colon */
+
+  @media (max-width: 520px) {
+    .flip-clock {
+      --fcc-digit-block-width: 34px;
+      --fcc-label-font-size: 10px; /* adjust this value as needed */
+      --fcc-separator-size: 0px; /* adjust this value as needed */
+    }
+  }
 }
 
 .flip-clock-black {

@@ -38,6 +38,7 @@ module.exports = {
         amarillo: "#FFE600",
         rosa: "#F43589",
         morado: "#7835FF",
+        secondarylight: "#fbc527",
       },
       fontFamily: {
         soap: "Soap",

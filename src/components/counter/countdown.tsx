@@ -6,14 +6,16 @@ import "./flip.css";
 type Props = {
   date?: string;
   mobile: boolean;
+  classname?: string;
 };
 export const CountDown = ({
   date = "2024-02-15 23:50",
   mobile = false,
+  classname = "flip-clock-black",
 }: Props) => {
   return (
     <FlipClockCountdown
-      className={"flip-clock-black"}
+      className={classname}
       to={new Date(date)}
       showLabels={true}
       showSeparators={false}
