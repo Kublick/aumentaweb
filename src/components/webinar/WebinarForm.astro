@@ -9,18 +9,86 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-4 md:flex-row md:gap-8 mt-8 p-4">
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      class="px-8 h-14 text-primary text-black"
-    />
-    <button
-      type="submit"
-      class="px-4 font-bold uppercase bg-[#fbbf0f] h-14 text-azul hover:bg-secondarylight transform active:scale-75 transition-transform min-w-fit rounded-lg"
-    >
-      ¡Si, Quiero entrar!
-    </button>
-  </div>
+  <form
+    action="https://api.smtprelay.co/contact/add?version=2"
+    data-id="doySoSOFiJ"
+    method="post"
+    id="ewf_subscriptionForm_doySoSOFiJ"
+    class="EWF__form Inline"
+  >
+    <fieldset class="webform-custominputs">
+      <div class="flex flex-col gap-4 md:flex-row md:gap-8 mt-8 p-4">
+        <input
+          maxlength="81"
+          class="px-8 h-14 text-primary text-black"
+          name="email"
+          size="20"
+          type="email"
+          required=""
+          placeholder="Tu mejor correo"
+        />
+        <input
+          type="submit"
+          name="submit"
+          value=" ¡Si, Quiero entrar!"
+          id="eesubmit"
+          class="px-4 font-bold uppercase bg-[#fbbf0f] h-14 text-azul hover:bg-secondarylight transform active:scale-75 transition-transform min-w-fit rounded-lg"
+        />
+      </div>
+      <div class="checkboxes"></div>
+      <div class="webform-lists" style="display: none;">
+        <div
+          style="display:flex;"
+          class="checkboxes js-[1] Aumenta Pacientes Febreri"
+        >
+          <label class="container-box">
+            <input
+              type="checkbox"
+              name="publiclistid"
+              id="FZsDZGNp"
+              value="a3ed93f8-afd9-4c63-b1b7-d30911ed294c"
+              checked="checked"
+            />
+          </label>
+          <label class="publiclistlabel" for="FZsDZGNp"
+            >[1] Aumenta Pacientes Febreri
+          </label>
+        </div>
+      </div>
+      <div class="consent"></div>
+      <p id="ewf_datadisclaimer"></p>
+    </fieldset>
+    <fieldset class="webform-options style-updated" style="border:none;">
+      <input
+        type="hidden"
+        name="publicaccountid"
+        value="9377d1ed-c310-4467-b52c-bee4e5379dcb"
+      />
+      <input
+        type="hidden"
+        name="returnUrl"
+        value="http://aumentapacientes.com/gracias"
+      />
+      <input type="hidden" name="activationReturnUrl" value="" />
+      <input type="hidden" name="alreadyactiveurl" value="" />
+      <input type="hidden" name="activationTemplate" value="" />
+      <input type="hidden" name="source" value="WebForm" />
+      <input
+        type="hidden"
+        name="verifyemail"
+        value="false"
+        id="ewf_verifyEmails"
+      />
+      <input type="hidden" id="ewf_captcha" name="captcha" value="false" />
+      <input type="hidden" name="sendActivation" value="false" />
+      <input type="hidden" name="notifyEmail" value="" />
+      <button
+        type="button"
+        name="dismissForm"
+        id="ewf_dismissForm"
+        style="display:none; position: absolute; top: 0; right: 0; float: right"
+        >X
+      </button>
+    </fieldset>
+  </form>
 </div>
