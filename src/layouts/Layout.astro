@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <!-- <script is:inline>
+  <script is:inline>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -30,18 +30,18 @@ const { title } = Astro.props;
       j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, "script", "dataLayer", "GTM-NB8XTTR");
-  </script> -->
+  </script>
   <!-- End Google Tag Manager -->
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript
+    <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-NB8XTTR"
         height="0"
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
-    > -->
+    >
     <!-- End Google Tag Manager (noscript) -->
     <slot />
   </body>
