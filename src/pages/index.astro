@@ -34,7 +34,7 @@ import Quien from "../components/webinar/Quien.astro";
   </main>
 </Layout>
 
-<script type="text/javascript">
+<script>
   // Get the button
   let mybutton = document.getElementById("myBtn");
 
@@ -48,9 +48,13 @@ import Quien from "../components/webinar/Quien.astro";
       document.body.scrollTop > 200 ||
       document.documentElement.scrollTop > 200
     ) {
-      mybutton.style.display = "block";
+      if (mybutton) {
+        mybutton.style.display = "block";
+      }
     } else {
-      mybutton.style.display = "none"; // Set the display style to none
+      if (mybutton) {
+        mybutton.style.display = "none"; // Set the display style to none
+      }
     }
   }
 

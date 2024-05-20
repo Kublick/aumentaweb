@@ -28,13 +28,17 @@
       </p>
     </div>
     <div class="px-4">
-      <img
-        src="/Clase_1.webp"
-        alt={"Clase"}
-        width={1000}
-        height={563}
-        class="rounded-xl order-1 md:order-last"
-      />
+      <picture>
+        <source media="(max-width: 599px)" srcset="/Clase_1_small.webp" />
+        <source media="(min-width: 600px)" srcset="/Clase_1.webp" />
+        <img
+          src="/Clase_1.webp"
+          alt="Clase"
+          class="rounded-xl order-1 md:order-last"
+          width="1000"
+          height="563"
+        />
+      </picture>
     </div>
   </div>
 </section>
